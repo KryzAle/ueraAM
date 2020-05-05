@@ -31,31 +31,31 @@
         <div class="wrapper wrapper--w790">
             <div class="card card-5">
                 <div class="card-heading">
-                    <h2 class="title">Formulario de Inscripción</h2>
+                    <h2 class="title">Formulario de Inscripción del Aspirante</h2>
                 </div>
                 <div class="card-body">
                     <form method="POST">
                         <div class="form-row m-b-55">
-                            <div class="name">Nombres Completos del Aspirante</div>
+                            <div class="name">Nombres completos</div>
                             <div class="value">
                                 <div class="row row-space">
-                                    <div class="col-2">
-                                        <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="first_name">
-                                            <label class="label--desc">Nombres</label>
-                                        </div>
-                                    </div>
                                     <div class="col-2">
                                         <div class="input-group-desc">
                                             <input class="input--style-5" type="text" name="last_name">
                                             <label class="label--desc">Apellidos</label>
                                         </div>
                                     </div>
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="first_name">
+                                            <label class="label--desc">Nombres</label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">Direccion</div>
+                            <div class="name">Institución de la que proviene</div>
                             <div class="value">
                                 <div class="input-group">
                                     <input class="input--style-5" type="text" name="company">
@@ -63,7 +63,7 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">Email</div>
+                            <div class="name">Correo Electrónico (indispensable estudiantes de 1ro, 2do y 3ro. de BGU)</div>
                             <div class="value">
                                 <div class="input-group">
                                     <input class="input--style-5" type="email" name="email">
@@ -74,12 +74,6 @@
                             <div class="name">Telefono</div>
                             <div class="value">
                                 <div class="row row-refine">
-                                    <div class="col-3">
-                                        <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="area_code">
-                                            <label class="label--desc">Area Code</label>
-                                        </div>
-                                    </div>
                                     <div class="col-9">
                                         <div class="input-group-desc">
                                             <input class="input--style-5" type="text" name="phone">
