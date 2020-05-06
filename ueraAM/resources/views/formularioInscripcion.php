@@ -33,27 +33,148 @@
                 <div class="card-heading">
                     <h2 class="title">Formulario de Inscripción del Aspirante</h2>
                 </div>
+                
                 <div class="card-body">
+                        <div class="row justify-content-center">
+                            <h3>Datos del Aspirante</h3>
+                        </div>
+                        <hr noshade="noshade" size="2" width="100%" />
+                        <br>
                     <form method="POST">
-                        <div class="form-row m-b-55">
+
+                        <div class="form-row">
+                            <div class="name">Cédula de Identidad</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="ced_asp">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
                             <div class="name">Nombres completos</div>
                             <div class="value">
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="last_name">
+                                            <input class="input--style-5" type="text" name="ape_asp">
                                             <label class="label--desc">Apellidos</label>
                                         </div>
                                     </div>
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="first_name">
+                                            <input class="input--style-5" type="text" name="nom_asp">
                                             <label class="label--desc">Nombres</label>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="form-row">
+                            <div class="name">Lugar de Nacimiento</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="lug_asp">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Fecha de Nacimiento</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-1">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="date" name="fec_asp">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Nacionalidad</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="nac_asp">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Etnia</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="etn_asp">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Correo Electrónico</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="email" name="ema_asp">
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <div class="form-row">
+                            <div class="name">Dirección domiciliaria</div>
+                            <div class="value">
+                                
+                                <div class="form-row">
+                                    <div class="value">
+                                        <div class="input-group">
+                                            <input class="input--style-5" type="text" name="par_asp">
+                                            <label class="label--desc">Parroquia</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="value">
+                                        <div class="input-group">
+                                            <input class="input--style-5" type="text" name="bar_asp">
+                                            <label class="label--desc">Barrio/Ciudadela</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="cpr_asp">
+                                            <label class="label--desc">Calle principal</label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="cse_asp">
+                                            <label class="label--desc">Calle secundaria</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <!-- Title Page
+
+                        
                         <div class="form-row">
                             <div class="name">Institución de la que proviene</div>
                             <div class="value">
@@ -62,15 +183,8 @@
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="form-row">
-                            <div class="name">Correo Electrónico (indispensable estudiantes de 1ro, 2do y 3ro. de BGU)</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-5" type="email" name="email">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row m-b-55">
                             <div class="name">Telefono</div>
                             <div class="value">
                                 <div class="row row-refine">
@@ -112,8 +226,331 @@
                                 </label>
                             </div>
                         </div>
+                        -->
+                        <div class="row justify-content-center">
+                            <h3>Datos de la Madre</h3>
+                        </div>
+                        <hr noshade="noshade" size="2" width="100%" />
+                        <br>
+                        <div class="form-row">
+                            <div class="name">Cédula de Identidad</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="ced_mad">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="name">Nombres completos</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="ape_mad">
+                                            <label class="label--desc">Apellidos</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="nom_mad">
+                                            <label class="label--desc">Nombres</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Estado Civil</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="est_mad">
+                                            <option disabled="disabled" selected="selected">Escoja una opción</option>
+                                            <option>Soltero/a</option>
+                                            <option>Casado/a</option>
+                                            <option>Viudo/a</option>
+                                            <option>Divorciado/a</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="name">Profesión</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="pro_mad">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Lugar de trabajo</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="email" name="lug_mad">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Telefono convencional</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="tel_mad">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Telefono Celular</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="cel_mad">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Correo Electrónico</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="email" name="ema_mad">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-center">
+                            <h3>Datos del Padre</h3>
+                        </div>
+                        <hr noshade="noshade" size="2" width="100%" />
+                        <br>
+                        <div class="form-row">
+                            <div class="name">Cédula de Identidad</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="ced_pad">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="name">Nombres completos</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="ape_pad">
+                                            <label class="label--desc">Apellidos</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="nom_pad">
+                                            <label class="label--desc">Nombres</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="name">Estado Civil</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="est_pad">
+                                            <option disabled="disabled" selected="selected">Escoja una opción</option>
+                                            <option>Soltero/a</option>
+                                            <option>Casado/a</option>
+                                            <option>Viudo/a</option>
+                                            <option>Divorciado/a</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Profesión</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="pro_pad">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Lugar de trabajo</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="email" name="lug_pad">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Telefono convencional</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="tel_pad">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Telefono Celular</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="cel_pad">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Correo Electrónico</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="email" name="ema_pad">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <h3>Datos de la Representante Legal</h3>
+                        </div>
+                        <hr noshade="noshade" size="2" width="100%" />
+                        <br>
+                        <div class="form-row">
+                            <div class="name">Cédula de Identidad</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="ced_rep">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="name">Nombres completos</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="ape_rep">
+                                            <label class="label--desc">Apellidos</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="nom_rep">
+                                            <label class="label--desc">Nombres</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="name">Estado Civil</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="est_rep">
+                                            <option disabled="disabled" selected="selected">Escoja una opción</option>
+                                            <option>Soltero/a</option>
+                                            <option>Casado/a</option>
+                                            <option>Viudo/a</option>
+                                            <option>Divorciado/a</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Profesión</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="pro_rep">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Lugar de trabajo</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="email" name="lug_rep">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Telefono convencional</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="tel_rep">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Telefono Celular</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="cel_rep">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Correo Electrónico</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="email" name="ema_rep">
+                                </div>
+                            </div>
+                        </div>
                         <div>
-                            <button class="btn btn--radius-2 btn--red" type="submit">Register</button>
+                            <button class="btn btn--radius-2 btn--blue" type="submit">Siguiente</button>
                         </div>
                     </form>
                 </div>
