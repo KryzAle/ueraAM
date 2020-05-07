@@ -2,21 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
-Route::get('/', function () {
-    return view('formularioInscripcion');
-});
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/formularioaspirante', 'InscripcionController@formAspirante')->name('formularioasp');
+Route::get('/formularioacademico', 'InscripcionController@formAcademico')->name('formularioaca');
+Route::get('/formulariopsicologico', 'InscripcionController@formPsicologico')->name('formulariopsi');
+Route::get('/findelregistro', 'InscripcionController@registroend')->name('registroend');
+
+
+
