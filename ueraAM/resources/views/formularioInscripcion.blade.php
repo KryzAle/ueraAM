@@ -40,15 +40,15 @@
                         </div>
                         <hr noshade="noshade" size="2" width="100%" />
                         <br>
-                    <form method="POST">
-
+                    <form method="POST" action="{{ route('aspirante.crear') }}">
+                        @csrf
                         <div class="form-row">
                             <div class="name">Cédula de Identidad</div>
                             <div class="value">
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="ced_asp">
+                                            <input class="input--style-5" type="text" name="ced_asp" required>
                                         </div>
                                     </div>
                                 </div>
@@ -61,13 +61,13 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="ape_asp">
+                                            <input class="input--style-5" type="text" name="ape_asp" required>
                                             <label class="label--desc">Apellidos</label>
                                         </div>
                                     </div>
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="nom_asp">
+                                            <input class="input--style-5" type="text" name="nom_asp" required>
                                             <label class="label--desc">Nombres</label>
                                         </div>
                                     </div>
@@ -81,7 +81,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="lug_asp">
+                                            <input class="input--style-5" type="text" name="lug_nac_asp" required>
                                         </div>
                                     </div>
                                 </div>
@@ -93,7 +93,7 @@
                                 <div class="row row-space">
                                     <div class="col-1">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="date" name="fec_asp">
+                                            <input class="input--style-5" type="date" name="fec_nac_asp" required>
                                         </div>
                                     </div>
                                 </div>
@@ -105,7 +105,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="nac_asp">
+                                            <input class="input--style-5" type="number" name="her_asp">
                                             <label class="label--desc">Deje en blanco si es hijo único</label>
                                         </div>
                                     </div>
@@ -118,7 +118,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="nac_asp">
+                                            <input class="input--style-5" type="number" name="lug_asp" required>
                                             <label class="label--desc">Ponga 1 si es hijo único</label>
                                         </div>
                                     </div>
@@ -131,7 +131,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="nac_asp">
+                                            <input class="input--style-5" type="text" name="nac_asp" required>
                                         </div>
                                     </div>
                                 </div>
@@ -143,7 +143,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="etn_asp">
+                                            <input class="input--style-5" type="text" name="etn_asp" required>
                                         </div>
                                     </div>
                                 </div>
@@ -153,7 +153,7 @@
                             <div class="name">Correo Electrónico</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="email" name="ema_asp">
+                                    <input class="input--style-5" type="email" name="ema_asp" required>
                                 </div>
                             </div>
                         </div>
@@ -166,7 +166,7 @@
                                 <div class="form-row">
                                     <div class="value">
                                         <div class="input-group">
-                                            <input class="input--style-5" type="text" name="par_asp">
+                                            <input class="input--style-5" type="text" name="par_asp" required>
                                             <label class="label--desc">Parroquia</label>
                                         </div>
                                     </div>
@@ -174,7 +174,7 @@
                                 <div class="form-row">
                                     <div class="value">
                                         <div class="input-group">
-                                            <input class="input--style-5" type="text" name="bar_asp">
+                                            <input class="input--style-5" type="text" name="bar_asp" required>
                                             <label class="label--desc">Barrio/Ciudadela</label>
                                         </div>
                                     </div>
@@ -182,14 +182,14 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="cpr_asp">
+                                            <input class="input--style-5" type="text" name="cal_pri_asp" required>
                                             <label class="label--desc">Calle principal</label>
                                         </div>
                                     </div>
                                     
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="cse_asp">
+                                            <input class="input--style-5" type="text" name="cal_sec_asp" required>
                                             <label class="label--desc">Calle secundaria</label>
                                         </div>
                                     </div>
@@ -264,7 +264,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="ced_mad">
+                                            <input class="input--style-5" type="text" name="ced_mad" required>
                                         </div>
                                     </div>
                                 </div>
@@ -277,13 +277,13 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="ape_mad">
+                                            <input class="input--style-5" type="text" name="ape_mad" required>
                                             <label class="label--desc">Apellidos</label>
                                         </div>
                                     </div>
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="nom_mad">
+                                            <input class="input--style-5" type="text" name="nom_mad" required>
                                             <label class="label--desc">Nombres</label>
                                         </div>
                                     </div>
@@ -295,7 +295,7 @@
                             <div class="value">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="est_mad">
+                                        <select name="est_civ_mad" required>
                                             <option disabled="disabled" selected="selected">Escoja una opción</option>
                                             <option>Soltero/a</option>
                                             <option>Casado/a</option>
@@ -314,7 +314,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="pro_mad">
+                                            <input class="input--style-5" type="text" name="pro_mad" required>
                                         </div>
                                     </div>
                                 </div>
@@ -324,7 +324,7 @@
                             <div class="name">Lugar de trabajo</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="email" name="lug_mad">
+                                    <input class="input--style-5" type="text" name="lug_tra_mad" required>
                                 </div>
                             </div>
                         </div>
@@ -334,7 +334,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="tel_mad">
+                                            <input class="input--style-5" type="text" name="tel_mad" required>
                                         </div>
                                     </div>
                                 </div>
@@ -346,7 +346,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="cel_mad">
+                                            <input class="input--style-5" type="text" name="cel_mad" required>
                                         </div>
                                     </div>
                                 </div>
@@ -356,7 +356,7 @@
                             <div class="name">Correo Electrónico</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="email" name="ema_mad">
+                                    <input class="input--style-5" type="email" name="ema_mad" required>
                                 </div>
                             </div>
                         </div>
@@ -372,7 +372,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="ced_pad">
+                                            <input class="input--style-5" type="text" name="ced_pad" required>
                                         </div>
                                     </div>
                                 </div>
@@ -385,13 +385,13 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="ape_pad">
+                                            <input class="input--style-5" type="text" name="ape_pad" required>
                                             <label class="label--desc">Apellidos</label>
                                         </div>
                                     </div>
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="nom_pad">
+                                            <input class="input--style-5" type="text" name="nom_pad" required>
                                             <label class="label--desc">Nombres</label>
                                         </div>
                                     </div>
@@ -404,7 +404,7 @@
                             <div class="value">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="est_pad">
+                                        <select name="est_civ_pad" required>
                                             <option disabled="disabled" selected="selected">Escoja una opción</option>
                                             <option>Soltero/a</option>
                                             <option>Casado/a</option>
@@ -422,7 +422,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="pro_pad">
+                                            <input class="input--style-5" type="text" name="pro_pad" required>
                                         </div>
                                     </div>
                                 </div>
@@ -432,7 +432,7 @@
                             <div class="name">Lugar de trabajo</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="email" name="lug_pad">
+                                    <input class="input--style-5" type="text" name="lug_tra_pad" required>
                                 </div>
                             </div>
                         </div>
@@ -442,7 +442,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="tel_pad">
+                                            <input class="input--style-5" type="text" name="tel_pad" required>
                                         </div>
                                     </div>
                                 </div>
@@ -454,7 +454,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="cel_pad">
+                                            <input class="input--style-5" type="text" name="cel_pad" required>
                                         </div>
                                     </div>
                                 </div>
@@ -464,7 +464,7 @@
                             <div class="name">Correo Electrónico</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="email" name="ema_pad">
+                                    <input class="input--style-5" type="email" name="ema_pad" required>
                                 </div>
                             </div>
                         </div>
@@ -479,7 +479,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="ced_rep">
+                                            <input class="input--style-5" type="text" name="ced_rep" required>
                                         </div>
                                     </div>
                                 </div>
@@ -492,13 +492,13 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="ape_rep">
+                                            <input class="input--style-5" type="text" name="ape_rep" required>
                                             <label class="label--desc">Apellidos</label>
                                         </div>
                                     </div>
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="nom_rep">
+                                            <input class="input--style-5" type="text" name="nom_rep" required>
                                             <label class="label--desc">Nombres</label>
                                         </div>
                                     </div>
@@ -511,7 +511,7 @@
                             <div class="value">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="est_rep">
+                                        <select name="est_civ_rep" required>
                                             <option disabled="disabled" selected="selected">Escoja una opción</option>
                                             <option>Soltero/a</option>
                                             <option>Casado/a</option>
@@ -529,7 +529,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="pro_rep">
+                                            <input class="input--style-5" type="text" name="pro_rep" required>
                                         </div>
                                     </div>
                                 </div>
@@ -539,7 +539,7 @@
                             <div class="name">Lugar de trabajo</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="email" name="lug_rep">
+                                    <input class="input--style-5" type="text" name="lug_tra_rep" required>
                                 </div>
                             </div>
                         </div>
@@ -549,7 +549,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="tel_rep">
+                                            <input class="input--style-5" type="text" name="tel_rep" required>
                                         </div>
                                     </div>
                                 </div>
@@ -561,7 +561,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="cel_rep">
+                                            <input class="input--style-5" type="text" name="cel_rep" required>
                                         </div>
                                     </div>
                                 </div>
@@ -571,7 +571,7 @@
                             <div class="name">Correo Electrónico</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="email" name="ema_rep">
+                                    <input class="input--style-5" type="email" name="ema_rep" required>
                                 </div>
                             </div>
                         </div>

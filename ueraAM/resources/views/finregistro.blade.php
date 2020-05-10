@@ -10,7 +10,7 @@
     <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
-    <title>Formulario de Inscripción</title>
+    <title>Formulario Enviado</title>
 
     <!-- Icons font CSS-->
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
@@ -31,56 +31,16 @@
         <div class="wrapper wrapper--w790">
             <div class="card card-5">
                 <div class="card-heading">
-                    <h2 class="title">Datos Académicos</h2>
+                    <h2 class="title">Formulario Enviado</h2>
                 </div>
-                
                 <div class="card-body">
-                    <form method="POST">
-                        <h5><b>Cómputo de los ulimos dos años</b> (Adjuntar en un archivo PDF, los cómputos de los últimos dos años)</h5>
-                        <div class="form-row">
-                            <div class="value">
-                                <div class="input-group">
-                                    <input type="file" class="form-control-file" id="computo" name="computo">
-                                </div>
-                            </div>
-                        </div>
-                        <h5><b>Institución de Procedencia</b></h5>
-                        <div class="form-row">
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-5" type="email" name="ema_rep">
-                                </div>
-                            </div>
-                        </div>
-                        <h5><b>Documento de Comportamiento</b> (Adjuntar un archivo en formato PDF, el documento de comportamiento)</h5>
-                        <div class="form-row">
-                            <div class="value">
-                                <div class="input-group">
-                                    <input type="file" class="form-control-file" id="comportamiento" name="comportamiento">
-                                </div>
-                            </div>
-                        </div>
-
-                        <h5><b>Copia de la Cedula</b> (Adjuntar un archivo en formato PDF, el escaneado de la cedula de ciudadania)</h5>
-                        <div class="form-row">
-                            <div class="value">
-                                <div class="input-group">
-                                    <input type="file" class="form-control-file" id="cedula" name="cedula">
-                                </div>
-                            </div>
-                        </div>
-                        <h5><b>Foto</b> (Adjuntar un archivo en formato jpg, una foto tamaño carné)</h5>
-                        <div class="form-row">
-                            <div class="value">
-                                <div class="input-group">
-                                    <input type="file" class="form-control-file" id="foto" name="foto">
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <button class="btn btn--radius-2 btn--red" type="submit">Enviar Inscripción</button>
-                        </div>
-                    </form>
+                    <h5><b>Gracias, hemos recibido su inscripción</b> <br><br>Por favor estar atento a su correo electrónico pues por ese medio se informará oportunamente el estado de su inscripción así como el proceso de matrícula</h5>
+                    <br>
+                    <div>
+                    <a href="../storage/app/cedulas/2RV5gDQhxc9TcOG3VCRFZb1IFlEZH05yMCqipfJG.pdf" target="_blank">Título del enlace</a>.
+                    <!-- <button class="btn btn--radius-2 btn--red" type="submit">Enviar Inscripción</button> -->
+                        
+                    </div>
                 </div>
             </div>
         </div>
