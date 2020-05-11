@@ -6,10 +6,9 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header"></div>
-
                 <div class="card-body">
                     @if (session('status'))
-                        <div class="alert alert-success" role="alert">
+                        <div class="alert alert-danger" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
@@ -18,16 +17,10 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">Cedula de Identidad</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">Ingrese su cédula de Identidad</label>
 
                             <div class="col-md-6">
-                                <input id="cedula" type="text" class="col-md-10 col-form-label" name="cedula" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                <input id="cedula" type="text" class="col-md-10 col-form-label" name="cedula" autofocus required>
                             </div>
                         </div>
 

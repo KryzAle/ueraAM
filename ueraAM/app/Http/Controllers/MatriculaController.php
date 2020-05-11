@@ -14,9 +14,13 @@ class MatriculaController extends Controller
         //dd($request->cedula);
         $aspirante =App\Aspirante::where('ced_asp', $request->cedula)->get();
         if($aspirante->isEmpty()){
-            dd("no lo encontre");
+            return back()->with('status','El aspirante no ha sido encontrado');
         }else{
-            dd("lo encontre");
+            $aspirante =App\Aspirante::where('ced_asp', $request->cedula)->first();
+            $cedula=$aspirante->ced_asp;
+            $nombre=$aspirante->nom_asp." ".$aspirante->ape_asp;
+            $email=$aspirante->ema_asp;
+            return view('auth.register',compact('cedula','nombre','email'));
         }
 
 
