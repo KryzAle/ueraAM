@@ -91,7 +91,7 @@
                                 </div>
                             </div>
                         </div>
-                        <h5><b>Cómputo de los ulimos dos años</b> (Adjuntar en un archivo PDF, los cómputos de los últimos dos años)</h5>
+                        <h5><b>Calificaciones de los últimos dos años</b> (Adjuntar en un archivo PDF, el documento debe reflejar el cómputo final tanto académico como comportamental)</h5>
                         <br>
                         <div class="form-row">
                             <div class="value">
@@ -118,7 +118,7 @@
                                 </div>
                             </div>
                         </div>
-                        <h5><b>Documento de Comportamiento</b> (Adjuntar un archivo en formato PDF, el documento de comportamiento)</h5>
+                        <h5><b>Certificado del D.E.C.E. de la Institución de la que proviene</b> (Adjuntar un archivo en formato PDF)</h5>
                         <br>
                         <div class="form-row">
                             <div class="value">

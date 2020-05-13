@@ -37,7 +37,7 @@
                     <h5><b>Gracias, hemos recibido su inscripción</b> <br><br>Por favor estar atento a su correo electrónico pues por ese medio se informará oportunamente el estado de su inscripción así como el proceso de matrícula</h5>
                     <br>
                     <div>
-                    <a href="../storage/app/cedulas/2RV5gDQhxc9TcOG3VCRFZb1IFlEZH05yMCqipfJG.pdf" target="_blank">Título del enlace</a>.
+                    
                     <!-- <button class="btn btn--radius-2 btn--red" type="submit">Enviar Inscripción</button> -->
                         
                     </div>
