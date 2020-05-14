@@ -48,6 +48,7 @@ class HomeController extends Controller
     public function eliminar($id){
         $aspiranteEliminar = App\Aspirante::findOrFail($id);
         $aspiranteEliminar->delete();
-        return back()->with('status','aspirante Eliminado');
+        $aspirantes = App\Aspirante::paginate(50);
+        return redirect('home')->with('status','Aspirante Rechazado y Solicitud Eliminada')->with('aspirantes',$aspirantes);
     }
 }

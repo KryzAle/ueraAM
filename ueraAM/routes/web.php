@@ -18,6 +18,10 @@ Route::delete('/home/eliminar/{id}','HomeController@eliminar')->name('aspirantes
 Route::get('/formularioaspirante', 'InscripcionController@formAspirante')->name('formularioasp');
 Route::post('/formularioaspirante', 'InscripcionController@datosEstudiante')->name('aspirante.crear');
 
+
+Route::get('/formularioaspiranteinicial', 'InscripcionController@formAspiranteInicial')->name('formularioaspini');
+Route::post('/formularioaspiranteinicial', 'InscripcionController@datosEstudianteInicial')->name('aspiranteinicial.crear');
+
 Route::get('/formularioacademico', 'InscripcionController@formAcademico')->name('formularioaca');
 Route::post('/formularioacademico', 'InscripcionController@datosAcademicos')->name('academico.crear');
 
@@ -26,9 +30,11 @@ Route::post('/matricula', 'MatriculaController@comprobarAprobacion')->name('matr
 
 
 
-Route::get('/formulariopsicologico', 'InscripcionController@formPsicologico')->name('formulariopsi');
+
 
 Route::get('/findelregistro', 'InscripcionController@registroend')->name('registroend');
+Route::get('/pdfaspirante/{id}', 'InscripcionController@generarPDF')->name('generarpdf');
+
 
 
 

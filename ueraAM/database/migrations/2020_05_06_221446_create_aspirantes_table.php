@@ -60,15 +60,15 @@ class CreateAspirantesTable extends Migration
             $table->string('cel_rep');
             $table->string('ema_rep');
 
-            $table->string('grado_asp');
-            $table->string('computos_asp');
-            $table->string('proc_asp');
-            $table->string('ciu_ins_proc_asp');
-            $table->string('comportamiento_asp');
-            $table->string('copia_ced_asp');
-            $table->string('foto_asp');
+            $table->string('grado_asp')->nullable();
+            $table->string('computos_asp')->nullable();
+            $table->string('proc_asp')->nullable();
+            $table->string('ciu_ins_proc_asp')->nullable();
+            $table->string('comportamiento_asp')->nullable();
+            $table->string('copia_ced_asp')->nullable();
+            $table->string('foto_asp')->nullable();
 
-            $table->boolean('estado_asp');
+            $table->boolean('estado_asp')->nullable();
 
             $table->timestamps();
         });

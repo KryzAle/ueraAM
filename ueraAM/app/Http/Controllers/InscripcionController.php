@@ -13,9 +13,68 @@ class InscripcionController extends Controller
     public function formAcademico(){
         return view('formularioacademico');
     }
-    public function formPsicologico(){
-        return view('formulariopsicologico');
+    public function formAspiranteInicial(){
+        return view('formularioInscripcionInicial');
     }
+    public function generarPDF($id){
+        $aspirante = App\Aspirante::findOrFail($id);
+        $pdf = App::make('dompdf.wrapper');
+        $pdf->loadView('aspirantes.pdfaspirante', ['aspirante' => $aspirante]);
+        return $pdf->download($aspirante->ape_asp." ".$aspirante->nom_asp.".pdf");
+    }
+    public function datosEstudianteInicial(Request $request){
+        $nuevoAspirante = new App\Aspirante;
+        $nuevoAspirante->ced_asp = $request->ced_asp;
+        $nuevoAspirante->ape_asp = $request->ape_asp;
+        $nuevoAspirante->nom_asp = $request->nom_asp;
+        $nuevoAspirante->lug_nac_asp = $request->lug_nac_asp;
+        $nuevoAspirante->fec_nac_asp = $request->fec_nac_asp;
+        $nuevoAspirante->her_asp = $request->her_asp;
+        $nuevoAspirante->lug_asp = $request->lug_asp;
+        $nuevoAspirante->nac_asp = $request->nac_asp;
+        $nuevoAspirante->etn_asp = $request->etn_asp;
+        $nuevoAspirante->ema_asp = $request->ema_asp;
+        $nuevoAspirante->par_asp = $request->par_asp;
+        $nuevoAspirante->bar_asp = $request->bar_asp;
+        $nuevoAspirante->cal_pri_asp = $request->cal_pri_asp;
+        $nuevoAspirante->cal_sec_asp = $request->cal_sec_asp;
+
+        $nuevoAspirante->ced_mad = $request->ced_mad;
+        $nuevoAspirante->ape_mad = $request->ape_mad;
+        $nuevoAspirante->nom_mad = $request->nom_mad;
+        $nuevoAspirante->est_civ_mad = $request->est_civ_mad;
+        $nuevoAspirante->pro_mad = $request->pro_mad;
+        $nuevoAspirante->lug_tra_mad = $request->lug_tra_mad;
+        $nuevoAspirante->tel_mad = $request->tel_mad;
+        $nuevoAspirante->cel_mad = $request->cel_mad;
+        $nuevoAspirante->ema_mad = $request->ema_mad;
+       
+        $nuevoAspirante->ced_pad = $request->ced_pad;
+        $nuevoAspirante->ape_pad = $request->ape_pad;
+        $nuevoAspirante->nom_pad = $request->nom_pad;
+        $nuevoAspirante->est_civ_pad = $request->est_civ_pad;
+        $nuevoAspirante->pro_pad = $request->pro_pad;
+        $nuevoAspirante->lug_tra_pad = $request->lug_tra_pad;
+        $nuevoAspirante->tel_pad = $request->tel_pad;
+        $nuevoAspirante->cel_pad = $request->cel_pad;
+        $nuevoAspirante->ema_pad = $request->ema_pad;
+        
+        $nuevoAspirante->ced_rep = $request->ced_rep;
+        $nuevoAspirante->ape_rep = $request->ape_rep;
+        $nuevoAspirante->nom_rep = $request->nom_rep;
+        $nuevoAspirante->est_civ_rep = $request->est_civ_rep;
+        $nuevoAspirante->pro_rep = $request->pro_rep;
+        $nuevoAspirante->lug_tra_rep = $request->lug_tra_rep;
+        $nuevoAspirante->tel_rep = $request->tel_rep;
+        $nuevoAspirante->cel_rep = $request->cel_rep;
+        $nuevoAspirante->ema_rep = $request->ema_rep;
+        $nuevoAspirante->grado_asp = "Inicial";
+
+        //dd($nuevoAspirante);
+        $nuevoAspirante->save();
+        return view('finregistro');
+    }
+
     
     public function datosEstudiante(Request $request){
         $ced_asp = $request->ced_asp;

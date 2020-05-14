@@ -1,0 +1,47 @@
+use Illuminate\Support\Facades\Schema;
+
+public function boot()
+{
+    Schema::defaultStringLength(191);
+}
+
+
+php artisan migrate
+php artisan tinker
+
+OJO: Cambiar el campo Observacion en la tabla contacto
+
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
+
+//crear el administrador
+$user = new App\User;
+$user->name = 'Admin';
+$user->email = 'administrador@uera.com';
+$user->cedula = '1234567890';
+$user->password = Hash::make('uera.2020');
+$user->save();
+
+
+//crear los roles
+$role = Role::create(['name' => 'administrador']);
+$role = Role::create(['name' => 'usuario']);
+$role = Role::create(['name' => 'tecnico']);
+
+//crear permisos
+$permission = Permission::create(['name' => 'crear usuario']);
+
+//asignar permiso al los roles
+
+$role = Role::find(1); //administrador
+$role->givePermissionTo('crear usuario');
+
+//asignacion de roles
+
+$user = User::find(1);
+$user->assignRole('administrador');
+
+//si se crea otro administrador
+$user = User::find(2);
+
+$user->assignRole('administrador');
