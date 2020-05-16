@@ -1,20 +1,15 @@
-@extends('layouts.app')
+<head>
 
-@section('content')
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+</head>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header"><h3>Detalle de aspirante</h3></div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
 
-                    <table class="table ">
+                    <table class="table">
                         <tbody>
                             <tr>
                             <th colspan="2" class="text-center">Datos de Aspirante</th>
@@ -210,53 +205,13 @@
                             <th>Curso al que postula el aspirante</th>
                                 <td>{{$aspirante->grado_asp}}</td>
                             </tr>
-                            <tr>
-                            <th>Calificaciones</th>
-                                <td><a href="../../../storage/app/{{$aspirante->computos_asp}}" target="_blank" download="{{$aspirante->ape_asp.' '.$aspirante->nom_asp.' Calificaciones'}}.pdf" class="btn btn-info btn-sm"> Descargar</a></td>
-                            </tr>
-                            <tr>
-                            <th>Copia de Cédula</th>
-                                <td><a href="../../../storage/app/{{$aspirante->copia_ced_asp}}" target="_blank" download="{{$aspirante->ape_asp.' '.$aspirante->nom_asp.' Cedula'}}.pdf" class="btn btn-info btn-sm"> Descargar</a></td>
-                            </tr>
-                            <tr>
-                            <th>Foto de Aspirante</th>
-                                <td><a href="../../../storage/app/{{$aspirante->foto_asp}}" target="_blank" download="{{$aspirante->ape_asp.' '.$aspirante->nom_asp.' Foto'}}.jpg" class="btn btn-info btn-sm"> Descargar</a></td>
-                            </tr>
-                            <tr>
-                            <th>Certificado del D.E.C.E.</th>
-                                <td><a href="../../../storage/app/{{$aspirante->comportamiento_asp}}" target="_blank" download="{{$aspirante->ape_asp.' '.$aspirante->nom_asp.' D.E.C.E.'}}.pdf" class="btn btn-info btn-sm"> Descargar</a></td>
-                            </tr>
-                            <tr>
-                            <th colspan="2" class="text-center">Descargar Información de Aspirante</th>
-                            </tr>
-                            <tr>
-                            <th colspan="2" class="text-center"><a href="{{route('generarpdf',$aspirante->id)}}" target="_blank" class="btn btn-outline-danger">Descargar</a></th>
-                            </tr>
-                            <tr>
-                            <th colspan="2" class="text-center">Estado de la Solicitud</th>
-                            </tr>
-                            <tr>
-                            <th class="text-center"><a href="{{ route('aspirantes.aprobar', $aspirante->id) }}" class="btn btn-success">Aprobar</a></th>
-                                <td >
-                                    <form action="{{ route('aspirantes.eliminar', $aspirante->id) }}" class="d-inline" method="POST">
-                                        @method('DELETE')
-                                        @csrf
-                                        <button type="submit" class="btn btn-danger">Rechazar</button>
-                                    </form>
-                                
-                                </td>
-                            </tr>
-                             
 
                         </tbody>
                     </table>
 
                 </div>
-                
-                <br>
-                <a href="{{route('home')}}" class="btn btn-warning">Volver</a>
             </div>
         </div>
     </div>
 </div>
-@endsection
+

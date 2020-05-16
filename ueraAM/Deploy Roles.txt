@@ -9,7 +9,6 @@ public function boot()
 php artisan migrate
 php artisan tinker
 
-OJO: Cambiar el campo Observacion en la tabla contacto
 
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;

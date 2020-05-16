@@ -12,7 +12,13 @@ Route::get('/home/detalle/{id}', 'HomeController@detalle')->name('aspirantes.det
 Route::get('/home/editar/{id}', 'HomeController@editar')->name('aspirantes.editar');
 Route::put('/home/editar/{id}', 'HomeController@update')->name('aspirantes.update');
 Route::delete('/home/eliminar/{id}','HomeController@eliminar')->name('aspirantes.eliminar');
+Route::get('/home/aprobar/{id}', 'HomeController@aprobar')->name('aspirantes.aprobar');
 
+Route::get('/estudiantes', 'EstudianteController@index')->name('estudiantes');
+Route::get('/estudiantes/detalle/{id}', 'EstudianteController@detalle')->name('estudiantes.detalle');
+Route::get('/estudiantes/editar/{id}', 'EstudianteController@editar')->name('estudiantes.editar');
+Route::put('/estudiantes/editar/{id}', 'EstudianteController@update')->name('estudiantes.update');
+Route::delete('/estudiantes/eliminar/{id}','EstudianteController@eliminar')->name('estudiantes.eliminar');
 
 
 Route::get('/formularioaspirante', 'InscripcionController@formAspirante')->name('formularioasp');

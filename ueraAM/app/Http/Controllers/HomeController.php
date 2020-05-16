@@ -45,10 +45,74 @@ class HomeController extends Controller
         $aspiranteUpdate->save();
         return back()->with('mensaje','aspirante Actualizado');
     }
+    
+    public function aprobar($id){
+        $request = App\Aspirante::findOrFail($id);
+        $nuevoEstudiante = new App\Estudiante;
+
+        $nuevoEstudiante->ced_asp = $request->ced_asp;
+        $nuevoEstudiante->ape_asp = $request->ape_asp;
+        $nuevoEstudiante->nom_asp = $request->nom_asp;
+        $nuevoEstudiante->lug_nac_asp = $request->lug_nac_asp;
+        $nuevoEstudiante->fec_nac_asp = $request->fec_nac_asp;
+        $nuevoEstudiante->her_asp = $request->her_asp;
+        $nuevoEstudiante->lug_asp = $request->lug_asp;
+        $nuevoEstudiante->nac_asp = $request->nac_asp;
+        $nuevoEstudiante->etn_asp = $request->etn_asp;
+        $nuevoEstudiante->ema_asp = $request->ema_asp;
+        $nuevoEstudiante->par_asp = $request->par_asp;
+        $nuevoEstudiante->bar_asp = $request->bar_asp;
+        $nuevoEstudiante->cal_pri_asp = $request->cal_pri_asp;
+        $nuevoEstudiante->cal_sec_asp = $request->cal_sec_asp;
+
+        $nuevoEstudiante->ced_mad = $request->ced_mad;
+        $nuevoEstudiante->ape_mad = $request->ape_mad;
+        $nuevoEstudiante->nom_mad = $request->nom_mad;
+        $nuevoEstudiante->est_civ_mad = $request->est_civ_mad;
+        $nuevoEstudiante->pro_mad = $request->pro_mad;
+        $nuevoEstudiante->lug_tra_mad = $request->lug_tra_mad;
+        $nuevoEstudiante->tel_mad = $request->tel_mad;
+        $nuevoEstudiante->cel_mad = $request->cel_mad;
+        $nuevoEstudiante->ema_mad = $request->ema_mad;
+       
+        $nuevoEstudiante->ced_pad = $request->ced_pad;
+        $nuevoEstudiante->ape_pad = $request->ape_pad;
+        $nuevoEstudiante->nom_pad = $request->nom_pad;
+        $nuevoEstudiante->est_civ_pad = $request->est_civ_pad;
+        $nuevoEstudiante->pro_pad = $request->pro_pad;
+        $nuevoEstudiante->lug_tra_pad = $request->lug_tra_pad;
+        $nuevoEstudiante->tel_pad = $request->tel_pad;
+        $nuevoEstudiante->cel_pad = $request->cel_pad;
+        $nuevoEstudiante->ema_pad = $request->ema_pad;
+        
+        $nuevoEstudiante->ced_rep = $request->ced_rep;
+        $nuevoEstudiante->ape_rep = $request->ape_rep;
+        $nuevoEstudiante->nom_rep = $request->nom_rep;
+        $nuevoEstudiante->est_civ_rep = $request->est_civ_rep;
+        $nuevoEstudiante->pro_rep = $request->pro_rep;
+        $nuevoEstudiante->lug_tra_rep = $request->lug_tra_rep;
+        $nuevoEstudiante->tel_rep = $request->tel_rep;
+        $nuevoEstudiante->cel_rep = $request->cel_rep;
+        $nuevoEstudiante->ema_rep = $request->ema_rep;
+
+        $nuevoEstudiante->grado_asp = $request->grado_asp;
+        $nuevoEstudiante->proc_asp = $request->proc_asp;
+        $nuevoEstudiante->ciu_ins_proc_asp = $request->ciu_ins_proc_asp;
+        $nuevoEstudiante->pago_asp = "";
+        $nuevoEstudiante->fec_pago_asp = "";
+        $nuevoEstudiante->foto_asp = $request->foto_asp;
+        $nuevoEstudiante->estado_asp = true;
+        
+        $nuevoEstudiante->save();
+        $request->delete();
+        
+        $aspirantes = App\Aspirante::paginate(50);
+        return redirect('home')->with('status','Aspirante Aprobado, se han emitido los correos electrónicos y se ha inscrito al estudiante')->with('aspirantes',$aspirantes);
+    }
     public function eliminar($id){
         $aspiranteEliminar = App\Aspirante::findOrFail($id);
         $aspiranteEliminar->delete();
         $aspirantes = App\Aspirante::paginate(50);
-        return redirect('home')->with('status','Aspirante Rechazado y Solicitud Eliminada')->with('aspirantes',$aspirantes);
+        return redirect('home')->with('error','Aspirante Rechazado y Solicitud Eliminada')->with('aspirantes',$aspirantes);
     }
 }
