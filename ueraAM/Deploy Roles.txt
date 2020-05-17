@@ -9,23 +9,42 @@ public function boot()
 php artisan migrate
 php artisan tinker
 
-
+use App\User;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
-
-//crear el administrador
-$user = new App\User;
-$user->name = 'Admin';
-$user->email = 'administrador@uera.com';
-$user->cedula = '1234567890';
-$user->password = Hash::make('uera.2020');
-$user->save();
-
+use Spatie\Permission\Traits\HasRoles;
 
 //crear los roles
 $role = Role::create(['name' => 'administrador']);
-$role = Role::create(['name' => 'usuario']);
-$role = Role::create(['name' => 'tecnico']);
+$role = Role::create(['name' => 'estudiante']);
+$role = Role::create(['name' => 'secretaria']);
+$role = Role::create(['name' => 'psicologia']);
+
+//crear el administrador
+$user = new App\User;
+$user->name = 'Administrador';
+$user->email = 'administrador@uera.edu.ec';
+$user->cedula = '1111111111';
+$user->password = Hash::make('administrador.uera');
+$user->assignRole('administrador');
+$user->save();
+
+$user = new App\User;
+$user->name = 'Secretaria';
+$user->email = 'secretaria@uera.edu.ec';
+$user->cedula = '22222222222';
+$user->password = Hash::make('secretaria.uera');
+$user->assignRole('secretaria');
+$user->save();
+
+$user = new App\User;
+$user->name = 'Psicologia';
+$user->email = 'psicologia@uera.edu.ec';
+$user->cedula = '33333333333';
+$user->password = Hash::make('psicologia.uera');
+$user->assignRole('psicologia');
+$user->save();
+
 
 //crear permisos
 $permission = Permission::create(['name' => 'crear usuario']);
@@ -38,7 +57,7 @@ $role->givePermissionTo('crear usuario');
 //asignacion de roles
 
 $user = User::find(1);
-$user->assignRole('administrador');
+$user->assignRole('estudiante');
 
 //si se crea otro administrador
 $user = User::find(2);

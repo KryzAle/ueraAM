@@ -30,8 +30,8 @@
                                     <th scope="col">Cedula</th>
                                     <th scope="col">Nombres</th>
                                     <th scope="col">Apellidos</th>
-                                    <th scope="col">Curso de Postulación</th>
-                                    <th scope="col">Estudiante Nuevo</th>
+                                    <th scope="col">Grado/Curso</th>
+                                    <th scope="col">Inscrito en el Escolástico</th>
                                     <th scope="col">Acciones</th>
                                 </tr>
                             </thead>
@@ -43,13 +43,15 @@
                                     <td>{{$item->ape_asp}}</td>
                                     <td>{{$item->grado_asp}}</td>
                                     <td>
-                                        <div class="alert alert-danger" role="alert">
-                                            @if($item->estado_asp==1)
+                                        @if($item->estado_asp==0)
+                                            <div class="alert alert-danger" role="alert">
+                                                No
+                                            </div>
+                                        @else
+                                            <div class="alert alert-success" role="alert">
                                                 Si
-                                            @else
-                                                Nel
-                                            @endif
-                                        </div>
+                                            </div>
+                                        @endif
                                     </td>
                                     <td style="word-wrap: break-word">
                                         <a class="btn btn-outline-primary" href="{{route('estudiantes.detalle',$item)}}">Detalle</a>

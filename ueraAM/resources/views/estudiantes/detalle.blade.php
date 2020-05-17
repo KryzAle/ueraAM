@@ -210,17 +210,42 @@
                             <th>Curso al que se matriculó el estudiante</th>
                                 <td>{{$estudiante->grado_asp}}</td>
                             </tr>
-                            
                             <tr>
-                                <th colspan="2" class="text-center">
+                            <th colspan="2" class="text-center">Datos para la Factura</th>
+                            </tr>
+                            <th>Cedula</th>
+                                <td>{{$estudiante->ced_fac}}</td>
+                            </tr>
+                            <th>Nombres</th>
+                                <td>{{$estudiante->nom_fac}}</td>
+                            </tr>
+                            <th>Apellidos</th>
+                                <td>{{$estudiante->ape_fac}}</td>
+                            </tr>
+                            <th>Correo Electrónico</th>
+                                <td>{{$estudiante->ema_fac}}</td>
+                            </tr>
+                            <th>Dirección</th>
+                                <td>{{$estudiante->dir_fac}}</td>
+                            </tr>
+                            <th>Teléfono</th>
+                                <td>{{$estudiante->tel_fac}}</td>
+                            </tr>
+
+                            <tr>
+                             <th class="text-center"><a href="{{ route('estudiantes.inscrito', $estudiante->id) }}" class="btn btn-success">Marcar como inscrito en el escolástico</a></th>
+                                <td >
                                     <form action="{{ route('estudiantes.eliminar', $estudiante->id) }}" class="d-inline" method="POST">
                                         @method('DELETE')
                                         @csrf
                                         <button type="submit" class="btn btn-danger">Eliminar Estudiante</button>
                                     </form>
-                                
-                                </th>
-                             </tr>
+                                </td>
+                            </tr>
+
+
+
+
 
                         </tbody>
                     </table>

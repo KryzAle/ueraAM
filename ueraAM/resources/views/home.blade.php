@@ -1,16 +1,27 @@
 @extends('layouts.app')
 
 @section('content')
+@php
+    $usuarioActivo = auth()->id();
+@endphp
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-9">
             <div class="card">
-                
+            @if(@Auth::user()->hasRole('estudiante'))
+            <nav class="nav nav-pills flex-column flex-sm-row">
+                <a class="flex-sm-fill text-sm-center nav-link active" href="#">Inicio</a>
+                <a class="flex-sm-fill text-sm-center nav-link" href="{{route('estudiantes.editar', $usuarioActivo)}}">Actualizacion de datos</a>
+                <a class="flex-sm-fill text-sm-center nav-link" href="#">Convenio de Comportamiento</a>
+                <a class="flex-sm-fill text-sm-center nav-link disabled" href="#">Legalizar Inscripción</a>
+            </nav>
+            
+            <div class="card-header text-center"><iframe width="700" height="450" src="https://www.youtube.com/embed/21anS3PJGtQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div>
+            @endif
+            @if(@Auth::user()->hasRole('administrador')||@Auth::user()->hasRole('psicologia')||@Auth::user()->hasRole('secretaria'))
 
             <div class="card-header text-center"><h3>Lista de Solicitudes de aspirantes</h3></div>
                 <div class="card-body  text-center">
-                    
-                    
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
@@ -58,6 +69,7 @@
                     {{$aspirantes->links()}}
                 </div>
             </div>
+            @endif
         </div>
     </div>
 </div>

@@ -66,8 +66,16 @@ class CreateEstudiantesTable extends Migration
             $table->string('pago_asp')->nullable();
             $table->string('fec_pago_asp')->nullable();
             $table->string('foto_asp')->nullable();
-            
+
             $table->boolean('estado_asp')->nullable();
+
+            //datos para la factura
+            $table->string('ced_fac')->nullable();
+            $table->string('nom_fac')->nullable();
+            $table->string('ape_fac')->nullable();
+            $table->string('ema_fac')->nullable();
+            $table->string('dir_fac')->nullable();
+            $table->string('tel_fac')->nullable();
 
 
             $table->timestamps();

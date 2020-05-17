@@ -17,7 +17,7 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">Ingrese su cédula de Identidad</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">Cedula del aspirante</label>
 
                             <div class="col-md-6">
                                 <input id="cedula" type="text" class="col-md-10 col-form-label" name="cedula" autofocus required>

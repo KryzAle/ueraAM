@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $aspirantes = App\Aspirante::paginate(50);
+        $aspirantes = App\Aspirante::orderBy('created_at', 'desc')->paginate(50);
         return view('home',compact('aspirantes'));
     }
 
@@ -101,18 +101,18 @@ class HomeController extends Controller
         $nuevoEstudiante->pago_asp = "";
         $nuevoEstudiante->fec_pago_asp = "";
         $nuevoEstudiante->foto_asp = $request->foto_asp;
-        $nuevoEstudiante->estado_asp = true;
+        $nuevoEstudiante->estado_asp = false;
         
         $nuevoEstudiante->save();
         $request->delete();
         
-        $aspirantes = App\Aspirante::paginate(50);
+        $aspirantes = App\Aspirante::orderBy('created_at', 'desc')->paginate(50);
         return redirect('home')->with('status','Aspirante Aprobado, se han emitido los correos electrónicos y se ha inscrito al estudiante')->with('aspirantes',$aspirantes);
     }
     public function eliminar($id){
         $aspiranteEliminar = App\Aspirante::findOrFail($id);
         $aspiranteEliminar->delete();
-        $aspirantes = App\Aspirante::paginate(50);
+        $aspirantes = App\Aspirante::orderBy('created_at', 'desc')->paginate(50);
         return redirect('home')->with('error','Aspirante Rechazado y Solicitud Eliminada')->with('aspirantes',$aspirantes);
     }
 }
