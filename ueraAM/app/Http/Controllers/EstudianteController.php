@@ -45,7 +45,32 @@ class EstudianteController extends Controller
         $estudianteUpdate->cal_pri_asp = $request->cal_pri_asp;
         $estudianteUpdate->cal_sec_asp = $request->cal_sec_asp;
         $estudianteUpdate->save();
-        return back()->with('mensaje','estudiante Actualizado');
+        return back()->with('mensaje','Estudiante Actualizado');
+    }
+    public function editarmatricula($id){
+        $usuario = App\User::findOrFail($id);
+        $estudiante =App\Estudiante::where('ced_asp', $usuario->cedula)->first();
+        return view('estudiantes.editarmatricula',compact('estudiante'));
+    }
+    public function updatematricula(Request $request,$id){
+        if($request->hasFile('pago_asp')){
+            $pago = $request->file('pago_asp')->store('pagos');
+        }
+        $hoy = getdate();
+        $fechaHoy= $hoy['mday']."/" .$hoy['mon'] ."/".$hoy['year'];
+        
+        $estudianteUpdate = App\Estudiante::findOrFail($id);
+        $estudianteUpdate->ced_fac = $request->ced_fac;
+        $estudianteUpdate->nom_fac = $request->nom_fac;
+        $estudianteUpdate->ape_fac = $request->ape_fac;
+        $estudianteUpdate->ema_fac = $request->ema_fac;
+        $estudianteUpdate->dir_fac = $request->dir_fac;
+        $estudianteUpdate->tel_fac = $request->tel_fac;
+        $estudianteUpdate->pago_asp = $pago;
+        $estudianteUpdate->fec_pago_asp = $fechaHoy;
+
+        $estudianteUpdate->save();
+        return back()->with('mensaje','Datos de Pago y factura Actualizado');
     }
     public function marcarInscrito($id){
         $estudianteUpdate = App\Estudiante::orderBy('created_at', 'desc')->findOrFail($id);

@@ -212,19 +212,19 @@
                             </tr>
                             <tr>
                             <th>Calificaciones</th>
-                                <td><a href="../../../storage/app/{{$aspirante->computos_asp}}" target="_blank" download="{{$aspirante->ape_asp.' '.$aspirante->nom_asp.' Calificaciones'}}.pdf" class="btn btn-info btn-sm"> Descargar</a></td>
+                                <td><a href="../../../storage/app/{{$aspirante->computos_asp}}" target="_blank" download="{{$aspirante->ape_asp.' '.$aspirante->nom_asp.' Calificaciones'}}" class="btn btn-info btn-sm"> Descargar</a></td>
                             </tr>
                             <tr>
                             <th>Copia de Cédula</th>
-                                <td><a href="../../../storage/app/{{$aspirante->copia_ced_asp}}" target="_blank" download="{{$aspirante->ape_asp.' '.$aspirante->nom_asp.' Cedula'}}.pdf" class="btn btn-info btn-sm"> Descargar</a></td>
+                                <td><a href="../../../storage/app/{{$aspirante->copia_ced_asp}}" target="_blank" download="{{$aspirante->ape_asp.' '.$aspirante->nom_asp.' Cedula'}}" class="btn btn-info btn-sm"> Descargar</a></td>
                             </tr>
                             <tr>
                             <th>Foto de Aspirante</th>
-                                <td><a href="../../../storage/app/{{$aspirante->foto_asp}}" target="_blank" download="{{$aspirante->ape_asp.' '.$aspirante->nom_asp.' Foto'}}.jpg" class="btn btn-info btn-sm"> Descargar</a></td>
+                                <td><a href="../../../storage/app/{{$aspirante->foto_asp}}" target="_blank" download="{{$aspirante->ape_asp.' '.$aspirante->nom_asp.' Foto'}}" class="btn btn-info btn-sm"> Descargar</a></td>
                             </tr>
                             <tr>
                             <th>Certificado del D.E.C.E.</th>
-                                <td><a href="../../../storage/app/{{$aspirante->comportamiento_asp}}" target="_blank" download="{{$aspirante->ape_asp.' '.$aspirante->nom_asp.' D.E.C.E.'}}.pdf" class="btn btn-info btn-sm"> Descargar</a></td>
+                                <td><a href="../../../storage/app/{{$aspirante->comportamiento_asp}}" target="_blank" download="{{$aspirante->ape_asp.' '.$aspirante->nom_asp.' D.E.C.E.'}}" class="btn btn-info btn-sm"> Descargar</a></td>
                             </tr>
                             <tr>
                             <th colspan="2" class="text-center">Descargar Información de Aspirante</th>

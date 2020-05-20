@@ -18,6 +18,10 @@ Route::get('/estudiantes', 'EstudianteController@index')->name('estudiantes');
 Route::get('/estudiantes/detalle/{id}', 'EstudianteController@detalle')->name('estudiantes.detalle');
 Route::get('/estudiantes/editar/{id}', 'EstudianteController@editar')->name('estudiantes.editar');
 Route::put('/estudiantes/editar/{id}', 'EstudianteController@update')->name('estudiantes.update');
+
+Route::get('/estudiantes/actualizarmatricula/{id}', 'EstudianteController@editarmatricula')->name('estudiantes.editar.matricula');
+Route::put('/estudiantes/actualizarmatricula/{id}', 'EstudianteController@updatematricula')->name('estudiantes.update.matricula');
+
 Route::get('/estudiantes/marcarinscrito/{id}', 'EstudianteController@marcarInscrito')->name('estudiantes.inscrito');
 Route::delete('/estudiantes/eliminar/{id}','EstudianteController@eliminar')->name('estudiantes.eliminar');
 

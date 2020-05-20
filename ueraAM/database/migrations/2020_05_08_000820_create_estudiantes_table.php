@@ -77,6 +77,18 @@ class CreateEstudiantesTable extends Migration
             $table->string('dir_fac')->nullable();
             $table->string('tel_fac')->nullable();
 
+            //datos adicionales
+
+            $table->string('fe_asp')->nullable();
+            $table->string('vac_asp')->nullable();
+            $table->string('exp_asp')->nullable();
+            $table->string('dce_asp')->nullable();
+            $table->string('cerp_asp')->nullable();
+            $table->string('cerc_asp')->nullable();
+            $table->string('cedula_asp')->nullable();
+            $table->string('cedula_mad')->nullable();
+            $table->string('cedula_pad')->nullable();
+            $table->string('cedula_rep')->nullable();
 
             $table->timestamps();
 

@@ -82,15 +82,40 @@
                         <br>
                         <div class="form-row">
                             <div class="value">
-                                <div class="row row-space">
-                                    <div class="col-2">
-                                        <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="grado_asp" required>
-                                        </div>
+                                <div class="input-group">
+                                    <div class="rs-select1 js-select-simple select--no-search">
+                                        <select name="grado_asp" required>
+                                            <option disabled="disabled" selected="selected">Escoja una opción</option>
+                                            <option>Primero EGB</option>
+                                            <option>Segundo EGB</option>
+                                            <option>Tercero EGB</option>
+                                            <option>Cuarto EGB</option>
+                                            <option>Quinto EGB</option>
+                                            <option>Sexto EGB</option>
+                                            <option>Séptimo EGB</option>
+                                            <option>Octavo EGB</option>
+                                            <option>Noveno EGB</option>
+                                            <option>Décimo EGB</option>
+                                            <option>1ro BGU</option>
+                                            <option>2do BGU</option>
+                                            <option>3ro BGU</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+
+                        
+
+
+
+
+
+
+
+
                         <h5><b>Calificaciones de los últimos dos años</b> (Adjuntar en un archivo PDF, el documento debe reflejar el cómputo final tanto académico como comportamental)</h5>
                         <br>
                         <div class="form-row">
@@ -118,12 +143,12 @@
                                 </div>
                             </div>
                         </div>
-                        <h5><b>Certificado del D.E.C.E. de la Institución de la que proviene</b> (Adjuntar un archivo en formato PDF)</h5>
+                        <h5><b>Certificado del D.E.C.E. de la Institución de la que proviene</b> (En caso se posea), Adjuntar un archivo en formato PDF</h5>
                         <br>
                         <div class="form-row">
                             <div class="value">
                                 <div class="input-group">
-                                    <input type="file" class="form-control-file" accept=".pdf" id="comportamiento" name="comportamiento_asp" required>
+                                    <input type="file" class="form-control-file" accept=".pdf" id="comportamiento" name="comportamiento_asp">
                                 </div>
                             </div>
                         </div>

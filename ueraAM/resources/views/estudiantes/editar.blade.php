@@ -10,14 +10,11 @@
                     <a class="flex-sm-fill text-sm-center nav-link" href="{{ route('home') }}">Inicio</a>
                     <a class="flex-sm-fill text-sm-center nav-link active" href="#">Actualizacion de datos</a>
                     <a class="flex-sm-fill text-sm-center nav-link" href="#">Convenio de Comportamiento</a>
-                    <a class="flex-sm-fill text-sm-center nav-link disabled" href="#">Legalizar Inscripción</a>
+                    <a class="flex-sm-fill text-sm-center nav-link disabled" href="#">Legalizar Matrícula</a>
                 </nav>
-                
                 @endif
-
                 <div class="card-body">
                     <div class="card-header text-center"><h3>Actualizar datos de Estudiante</h3></div>
-
                     @if (session('mensaje'))
                         <div class="alert alert-success" role="alert">
                             {{ session('mensaje') }}
@@ -26,7 +23,7 @@
                     <form method="POST" action="{{ route('estudiantes.update',$estudiante->id) }}">
                         @method('PUT')
                         @csrf
-                        <table class="table ">
+                        <table class="table">
                         <tbody>
                             <tr>
                             <th colspan="2" class="text-center">Dirección Domiciliaria</th>
@@ -56,7 +53,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th>Calle Principal</th>
+                                <th>Calle Secundaria</th>
                                 <td>
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="secundaria" value="{{$estudiante->cal_sec_asp}}" name="cal_sec_asp" required>

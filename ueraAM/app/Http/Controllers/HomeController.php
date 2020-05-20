@@ -102,6 +102,20 @@ class HomeController extends Controller
         $nuevoEstudiante->fec_pago_asp = "";
         $nuevoEstudiante->foto_asp = $request->foto_asp;
         $nuevoEstudiante->estado_asp = false;
+
+        $nuevoEstudiante->fe_asp = "";
+        $nuevoEstudiante->vac_asp = "";
+        $nuevoEstudiante->exp_asp = "";
+        $nuevoEstudiante->dce_asp = $request->comportamiento_asp;
+        $nuevoEstudiante->cerp_asp = "";
+        $nuevoEstudiante->cerc_asp = "";
+        $nuevoEstudiante->cedula_asp = $request->copia_ced_asp;
+        $nuevoEstudiante->cedula_mad = "";
+        $nuevoEstudiante->cedula_pad = "";
+        $nuevoEstudiante->cedula_rep = "";
+        $nuevoEstudiante->foto_asp = $request->foto_asp;
+
+
         
         $nuevoEstudiante->save();
         $request->delete();

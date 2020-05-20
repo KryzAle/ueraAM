@@ -106,7 +106,7 @@
                                     <div class="col-2">
                                         <div class="input-group-desc">
                                             <input class="input--style-5" type="number" name="her_asp">
-                                            <label class="label--desc">Deje en blanco si es hijo único</label>
+                                            <label class="label--desc">Ponga 0 si es hijo único</label>
                                         </div>
                                     </div>
                                 </div>

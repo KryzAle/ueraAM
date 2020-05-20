@@ -68,7 +68,7 @@ class InscripcionController extends Controller
         $nuevoAspirante->tel_rep = $request->tel_rep;
         $nuevoAspirante->cel_rep = $request->cel_rep;
         $nuevoAspirante->ema_rep = $request->ema_rep;
-        $nuevoAspirante->grado_asp = "Inicial";
+        $nuevoAspirante->grado_asp = "Inicial II";
 
         //dd($nuevoAspirante);
         $nuevoAspirante->save();
@@ -171,21 +171,25 @@ class InscripcionController extends Controller
 
         //$datosAcademicos = $request->all();
         //dd($datosAcademicos );
+        $nuevoAspirante = new App\Aspirante;
         if($request->hasFile('computos_asp')){
             $computo = $request->file('computos_asp')->store('computos');
+            $nuevoAspirante->computos_asp = $computo;
         }
         if($request->hasFile('comportamiento_asp')){
             $comportamiento = $request->file('comportamiento_asp')->store('comportamientos');
+            $nuevoAspirante->comportamiento_asp = $comportamiento;
         }
         if($request->hasFile('copia_ced_asp')){
             $cedula = $request->file('copia_ced_asp')->store('cedulas');
+            $nuevoAspirante->copia_ced_asp = $cedula;
         }
         if($request->hasFile('foto_asp')){
             $foto = $request->file('foto_asp')->store('fotos');
+            $nuevoAspirante->foto_asp = $foto;
         }
         
         
-        $nuevoAspirante = new App\Aspirante;
         $nuevoAspirante->ced_asp = $request->ced_asp;
         $nuevoAspirante->ape_asp = $request->ape_asp;
         $nuevoAspirante->nom_asp = $request->nom_asp;
@@ -232,12 +236,8 @@ class InscripcionController extends Controller
         $nuevoAspirante->ema_rep = $request->ema_rep;
 
         $nuevoAspirante->grado_asp = $request->grado_asp;
-        $nuevoAspirante->computos_asp = $computo;
         $nuevoAspirante->proc_asp = $request->proc_asp;
         $nuevoAspirante->ciu_ins_proc_asp = $request->ciu_ins_proc_asp;
-        $nuevoAspirante->comportamiento_asp = $comportamiento;
-        $nuevoAspirante->copia_ced_asp = $cedula;
-        $nuevoAspirante->foto_asp = $foto;
         $nuevoAspirante->estado_asp = false;
 
         //dd($nuevoAspirante);

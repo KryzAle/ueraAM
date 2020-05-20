@@ -32,7 +32,7 @@
                                 <td>{{$estudiante->ape_asp}}</td>
                             </tr>
                             <tr>
-                            <th>Lugar de Nacimiento:</th>
+                            <th>Lugar de Nacimiento</th>
                                 <td>{{$estudiante->lug_nac_asp}}</td>
                             </tr>
                             <tr>
@@ -230,6 +230,12 @@
                             </tr>
                             <th>Teléfono</th>
                                 <td>{{$estudiante->tel_fac}}</td>
+                            </tr>
+                            <th>Fecha de subida del pago</th>
+                                <td>{{$estudiante->fec_pago_asp}}</td>
+                            </tr>
+                            <th>Descargar comprobante de pago</th>
+                                <td><a href="../../../storage/app/{{$estudiante->pago_asp}}" target="_blank" download="{{$estudiante->ape_asp.' '.$estudiante->nom_asp.' Pago'}}" class="btn btn-info btn-sm"> Descargar</a></td>
                             </tr>
 
                             <tr>

@@ -13,10 +13,12 @@
                 <a class="flex-sm-fill text-sm-center nav-link active" href="#">Inicio</a>
                 <a class="flex-sm-fill text-sm-center nav-link" href="{{route('estudiantes.editar', $usuarioActivo)}}">Actualizacion de datos</a>
                 <a class="flex-sm-fill text-sm-center nav-link" href="#">Convenio de Comportamiento</a>
-                <a class="flex-sm-fill text-sm-center nav-link disabled" href="#">Legalizar Inscripción</a>
+                <a class="flex-sm-fill text-sm-center nav-link " href="{{route('estudiantes.editar.matricula', $usuarioActivo)}}">Legalizar Matrícula</a>
             </nav>
-            
-            <div class="card-header text-center"><iframe width="700" height="450" src="https://www.youtube.com/embed/21anS3PJGtQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+                <div class="card-header text-center"><iframe width="700" height="450" src="https://www.youtube.com/embed/21anS3PJGtQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div>
+            </div>
             @endif
             @if(@Auth::user()->hasRole('administrador')||@Auth::user()->hasRole('psicologia')||@Auth::user()->hasRole('secretaria'))
 
