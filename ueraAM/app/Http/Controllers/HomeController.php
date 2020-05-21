@@ -23,10 +23,17 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
-        $aspirantes = App\Aspirante::orderBy('created_at', 'desc')->paginate(50);
+        if($request!=NULL){
+            $curso= $request->get('grado_asp');
+            $aspirantes = App\Aspirante::orderBy('created_at', 'desc')->grad_asp($curso)->paginate(25);
+        }else{
+            dd("es nulo no se encuentra");
+            $aspirantes = App\Aspirante::orderBy('created_at', 'desc')->paginate(25);
+        }
         return view('home',compact('aspirantes'));
+            
     }
 
     public function detalle($id){

@@ -68,7 +68,7 @@ class InscripcionController extends Controller
         $nuevoAspirante->tel_rep = $request->tel_rep;
         $nuevoAspirante->cel_rep = $request->cel_rep;
         $nuevoAspirante->ema_rep = $request->ema_rep;
-        $nuevoAspirante->grado_asp = "Inicial II";
+        $nuevoAspirante->grado_asp = "Inicial 2";
 
         //dd($nuevoAspirante);
         $nuevoAspirante->save();

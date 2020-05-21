@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 Route::get('/', 'HomeController@index')->name('homehome');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/home/detalle/{id}', 'HomeController@detalle')->name('aspirantes.detalle');
@@ -38,6 +39,9 @@ Route::post('/formularioacademico', 'InscripcionController@datosAcademicos')->na
 
 Route::get('/matricula', 'MatriculaController@verificarAprobacion')->name('matricula.verificar');
 Route::post('/matricula', 'MatriculaController@comprobarAprobacion')->name('matricula.comprobar');
+
+Route::get('/generaraprobados', 'EstudianteController@generarAprobados')->name('generar.aprobados');
+
 
 
 

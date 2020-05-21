@@ -237,7 +237,7 @@
                             </tr>
                             <tr>
                             <th class="text-center"><a href="{{ route('aspirantes.aprobar', $aspirante->id) }}" class="btn btn-success">Aprobar</a></th>
-                                <td >
+                                <td  class="text-center">
                                     <form action="{{ route('aspirantes.eliminar', $aspirante->id) }}" class="d-inline" method="POST">
                                         @method('DELETE')
                                         @csrf

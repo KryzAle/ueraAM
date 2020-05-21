@@ -22,7 +22,9 @@
             @endif
             @if(@Auth::user()->hasRole('administrador')||@Auth::user()->hasRole('psicologia')||@Auth::user()->hasRole('secretaria'))
 
+            
             <div class="card-header text-center"><h3>Lista de Solicitudes de aspirantes</h3></div>
+            
                 <div class="card-body  text-center">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
@@ -34,10 +36,25 @@
                             {{ session('error') }}
                         </div>
                     @endif
-                   
+                   <table>
+                        <tr>
+                            <td>
+                            <form method="GET" action="{{route('home')}}">
+                                <div class="input-group mb-3">
+                                        <input type="text" class="form-control"  value="{{ request('grado_asp')}}" placeholder="Ingrese curso/grado" aria-label="Buscar por curso/grado" aria-describedby="basic-addon2" name="grado_asp">
+                                <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+                                </div>
+                                </div>
+                            </form>
+                            </td>
+                        </tr>
+                   </table>
                     <table class="table table-responsive">
                     
                         <table class="table text-center table-responsive ">
+                        
+                            
                             <thead class="thead-dark">
                                 <tr>
                                     <th scope="col">Cedula</th>

@@ -21,7 +21,28 @@
                             {{ session('error') }}
                         </div>
                     @endif
-                   
+                    <table>
+                        <tr>
+                            <td>
+                            <form method="GET" action="{{route('estudiantes')}}">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control"  value="{{ request('grado_asp')}}" placeholder="Ingrese curso/grado" aria-label="Buscar por curso/grado" aria-describedby="basic-addon2" name="grado_asp">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+                                    </div>
+                                </div>
+                            </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="input-group mb-3">
+                                    <a class="btn btn-success" href="{{route('generar.aprobados')}}">Descargar Lista de Aprobados</a>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                   </table>
                     <table class="table table-responsive">
                     
                         <table class="table text-center table-responsive ">

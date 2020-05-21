@@ -23,9 +23,10 @@ class EstudianteController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
-        $estudiantes = App\Estudiante::orderBy('created_at', 'desc')->paginate(50);
+        $curso = $request->get('grado_asp');
+        $estudiantes = App\Estudiante::orderBy('created_at', 'desc')->grad_asp($curso)->paginate(50);
         return view('listaestudiantes',compact('estudiantes'));
     }
 
@@ -78,6 +79,12 @@ class EstudianteController extends Controller
         $estudianteUpdate->save();
         $estudiantes = App\Estudiante::orderBy('created_at', 'desc')->paginate(50);
         return redirect('estudiantes')->with('status','Estudiante marcado como inscrito en el escolástico')->with('estudiantes',$estudiantes);
+    }
+    public function generarAprobados(){
+        $estudiantesAprobados = App\Estudiante::where('estado_asp',true)->get();
+        $pdf = App::make('dompdf.wrapper');
+        $pdf->loadView('estudiantes.pdflistaaprobados', ['estudiantes' => $estudiantesAprobados]);
+        return $pdf->download("listaAprobados.pdf");
     }
     
     public function eliminar($id){

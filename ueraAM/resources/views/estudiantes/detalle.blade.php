@@ -238,9 +238,9 @@
                                 <td><a href="../../../storage/app/{{$estudiante->pago_asp}}" target="_blank" download="{{$estudiante->ape_asp.' '.$estudiante->nom_asp.' Pago'}}" class="btn btn-info btn-sm"> Descargar</a></td>
                             </tr>
 
-                            <tr>
+                            <tr >
                              <th class="text-center"><a href="{{ route('estudiantes.inscrito', $estudiante->id) }}" class="btn btn-success">Marcar como inscrito en el escolástico</a></th>
-                                <td >
+                                <td  class="text-center">
                                     <form action="{{ route('estudiantes.eliminar', $estudiante->id) }}" class="d-inline" method="POST">
                                         @method('DELETE')
                                         @csrf
