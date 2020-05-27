@@ -26,7 +26,7 @@
                             <td>
                             <form method="GET" action="{{route('estudiantes')}}">
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control"  value="{{ request('grado_asp')}}" placeholder="Ingrese curso/grado" aria-label="Buscar por curso/grado" aria-describedby="basic-addon2" name="grado_asp">
+                                    <input type="text" class="form-control"  value="{{request('grado_asp')}}" placeholder="Ingrese curso/grado" aria-label="Buscar por curso/grado" aria-describedby="basic-addon2" name="grado_asp">
                                     <div class="input-group-append">
                                         <button class="btn btn-outline-secondary" type="submit">Buscar</button>
                                     </div>
@@ -36,12 +36,17 @@
                         </tr>
                         <tr>
                             <td>
-                                <div class="input-group mb-3">
-                                    <a class="btn btn-success" href="{{route('generar.aprobados')}}">Descargar Lista de Aprobados</a>
-                                </div>
+                                <form method="GET" action="{{route('generar.aprobados')}}">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control"  value="{{ request('grado_asp')}}" placeholder="Ingrese curso/grado" aria-label="Buscar por curso/grado" aria-describedby="basic-addon2" name="grado_asp_pdf" hidden>
+                                            <div class="input-group mb-3">
+                                                <button class="btn btn-outline-danger" type="submit">Generar PDF (Estudiantes Nuevos) </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                             </td>
                         </tr>
-                        
                    </table>
                     <table class="table table-responsive">
                     

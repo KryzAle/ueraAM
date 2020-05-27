@@ -1,11 +1,12 @@
 <head>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
+<div class="card-header text-center"><h3>Lista de Aspirantes aprobados por curso</h3></div>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-
+                
                 <div class="card-body">
 
                     

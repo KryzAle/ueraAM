@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App;
-
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ReportarAprobado;
 
 class HomeController extends Controller
 {
@@ -121,9 +122,22 @@ class HomeController extends Controller
         $nuevoEstudiante->cedula_pad = "";
         $nuevoEstudiante->cedula_rep = "";
         $nuevoEstudiante->foto_asp = $request->foto_asp;
-
-
         
+        $data = array(
+            'nombres' => $nuevoEstudiante->nom_asp." ". $nuevoEstudiante->ape_asp,
+            'email' => $nuevoEstudiante->ema_asp,
+            'curso' => $nuevoEstudiante->grado_asp,
+          );
+          Mail::send('emails.aspiranteaprobado', $data, function ($message) {
+            $message->from('uera.admision@gmail.com', 'UERA Admisión');
+            $message->to('kryzale@gmail.com')->subject('¡Aspirante Aprobado!');
+        });
+        
+        Mail::to($request->ema_asp)->send(new ReportarAprobado($request->nom_asp." ".$request->ape_asp,$request->ced_asp));
+        Mail::to($request->ema_mad)->send(new ReportarAprobado($request->nom_asp." ".$request->ape_asp,$request->ced_asp));
+        Mail::to($request->ema_pad)->send(new ReportarAprobado($request->nom_asp." ".$request->ape_asp,$request->ced_asp));
+        Mail::to($request->ema_rep)->send(new ReportarAprobado($request->nom_asp." ".$request->ape_asp,$request->ced_asp));
+
         $nuevoEstudiante->save();
         $request->delete();
         

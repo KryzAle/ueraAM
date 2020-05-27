@@ -80,8 +80,9 @@ class EstudianteController extends Controller
         $estudiantes = App\Estudiante::orderBy('created_at', 'desc')->paginate(50);
         return redirect('estudiantes')->with('status','Estudiante marcado como inscrito en el escolástico')->with('estudiantes',$estudiantes);
     }
-    public function generarAprobados(){
-        $estudiantesAprobados = App\Estudiante::where('estado_asp',true)->get();
+    public function generarAprobados(Request $request){
+        $curso = $request->get('grado_asp_pdf');
+        $estudiantesAprobados = App\Estudiante::where('estado_asp',false)->grad_asp($curso)->paginate(50);
         $pdf = App::make('dompdf.wrapper');
         $pdf->loadView('estudiantes.pdflistaaprobados', ['estudiantes' => $estudiantesAprobados]);
         return $pdf->download("listaAprobados.pdf");
