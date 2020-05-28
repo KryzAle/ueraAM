@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App;
-
+use App\Exports\EstudiantesExport;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Imports\EstudiantesImport;
 
 class EstudianteController extends Controller
 {
@@ -93,5 +95,17 @@ class EstudianteController extends Controller
         $estudianteEliminar->delete();
         $estudiantes = App\Estudiante::orderBy('created_at', 'desc')->paginate(50);
         return redirect('estudiantes')->with('error','Estudiante Eliminado')->with('estudiantes',$estudiantes);
+    }
+    public function vistaimportarestudiante(){
+        return view('estudiantes.vistaimportar');
+    }
+    public function importarestudiante(Request $request){
+        $file = $request->file('file');
+        Excel::import(new EstudiantesImport, $file);
+        return back()->with('status','Importación de estudiantes completada');
+    }
+    
+    public function exportarestudiante(){
+        return Excel::download(new EstudiantesExport, 'estudiantes-list.xlsx');
     }
 }

@@ -248,18 +248,13 @@
                                     </form>
                                 </td>
                             </tr>
-
-
-
-
-
                         </tbody>
                     </table>
 
                 </div>
                 
                 <br>
-                <a href="{{route('home')}}" class="btn btn-warning">Volver</a>
+                <a href="{{route('estudiantes')}}" class="btn btn-warning">Volver</a>
             </div>
         </div>
     </div>

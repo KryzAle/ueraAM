@@ -42,6 +42,13 @@ Route::post('/matricula', 'MatriculaController@comprobarAprobacion')->name('matr
 
 Route::get('/generaraprobados', 'EstudianteController@generarAprobados')->name('generar.aprobados');
 
+Route::get('/importarestudiantes', 'EstudianteController@vistaimportarestudiante')->name('vista.importar.estudiantes');
+Route::post('/importarestudiantes', 'EstudianteController@importarestudiante')->name('importar.estudiantes');
+
+Route::get('/exportarestudiantes', 'EstudianteController@exportarestudiante')->name('exportar.estudiantes');
+
+
+
 
 
 

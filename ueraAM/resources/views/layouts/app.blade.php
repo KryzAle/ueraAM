@@ -57,7 +57,11 @@
                                     <a class="dropdown-item" href="{{ route('estudiantes') }}">
                                        Lista de Estudiantes
                                     </a>
+                                    <a class="dropdown-item" href="{{ route('vista.importar.estudiantes') }}">
+                                       Importar/Exportar Estudiantes
+                                    </a>
                                     @endif
+                                    
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
