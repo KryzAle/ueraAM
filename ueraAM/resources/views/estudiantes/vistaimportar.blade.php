@@ -21,7 +21,7 @@
                 <div class="card-header"><h3>Importar</h3></div>
                 <div class="card-body">
                     @if (session('status'))
-                        <div class="alert alert-danger" role="alert">
+                        <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif

@@ -91,7 +91,7 @@
                             </tbody>
                         </table>
                     </table>
-                    {{$estudiantes->links()}}
+                    {{$estudiantes->withQueryString()->links()}}
                 </div>
             </div>
         </div>

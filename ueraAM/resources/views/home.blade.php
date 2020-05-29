@@ -85,7 +85,7 @@
                             </tbody>
                         </table>
                     </table>
-                    {{$aspirantes->links()}}
+                    {{$aspirantes->withQueryString()->links()}}
                 </div>
             </div>
             @endif

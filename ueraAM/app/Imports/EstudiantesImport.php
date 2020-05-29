@@ -119,6 +119,7 @@ class EstudiantesImport implements ToModel
             'dir_fac' => $row[94],
             'tel_fac' => $row[95],
             'estado_asp' => true,
+            'foto_asp' => "fotos/default.jpg",
         ]);
     }
 }

@@ -20,6 +20,9 @@
                             <th colspan="2" class="text-center">Datos de estudiante</th>
                             </tr>
                             <tr>
+                            <th colspan="2" class="text-center"><img src="../../../storage/app/{{$estudiante->foto_asp}}" alt="Img Estudiante" class="img-thumbnail" style="width:30%"></th>
+                            </tr>
+                            <tr>
                             <th>Cedula</th>
                                 <td>{{$estudiante->ced_asp}}</td>
                             </tr>
@@ -63,7 +66,7 @@
                             <th colspan="2" class="text-center">Dirección Domiciliaria</th>
                             </tr>
                             <tr>
-                            <th>Barrio de Residencia</th>
+                            <th>Dirección de Residencia</th>
                                 <td>{{$estudiante->bar_asp}}</td>
                             </tr>
                             <tr>
@@ -232,10 +235,18 @@
                                 <td>{{$estudiante->tel_fac}}</td>
                             </tr>
                             <th>Fecha de subida del pago</th>
+                                @if (($estudiante->fec_pago_asp!=NULL) && ($estudiante->fec_pago_asp!=" "))
                                 <td>{{$estudiante->fec_pago_asp}}</td>
+                                @else
+                                <td> No dispone </td>
+                                @endif
                             </tr>
                             <th>Descargar comprobante de pago</th>
+                                @if (($estudiante->pago_asp!=NULL) && ($estudiante->pago_asp!=" "))
                                 <td><a href="../../../storage/app/{{$estudiante->pago_asp}}" target="_blank" download="{{$estudiante->ape_asp.' '.$estudiante->nom_asp.' Pago'}}" class="btn btn-info btn-sm"> Descargar</a></td>
+                                @else
+                                <td> No dispone </td>
+                                @endif
                             </tr>
 
                             <tr >

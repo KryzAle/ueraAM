@@ -68,7 +68,7 @@ class InscripcionController extends Controller
         $nuevoAspirante->tel_rep = $request->tel_rep;
         $nuevoAspirante->cel_rep = $request->cel_rep;
         $nuevoAspirante->ema_rep = $request->ema_rep;
-        $nuevoAspirante->grado_asp = "Inicial 2";
+        $nuevoAspirante->grado_asp = "2 IN";
 
         //dd($nuevoAspirante);
         $nuevoAspirante->save();
@@ -235,7 +235,49 @@ class InscripcionController extends Controller
         $nuevoAspirante->cel_rep = $request->cel_rep;
         $nuevoAspirante->ema_rep = $request->ema_rep;
 
-        $nuevoAspirante->grado_asp = $request->grado_asp;
+        $gradoAspirante = $request->grado_asp;
+        switch ($gradoAspirante) {
+            case "Primero EGB":
+                $nuevoAspirante->grado_asp ="1 EB";
+                break;
+            case "Segundo EGB":
+                $nuevoAspirante->grado_asp ="2 EB";
+                break;
+            case "Tercero EGB":
+                $nuevoAspirante->grado_asp ="3 EB";
+                break;
+            case "Cuarto EGB":
+                $nuevoAspirante->grado_asp ="4 EB";
+                break;
+            case "Quinto EGB":
+                $nuevoAspirante->grado_asp ="5 EB";
+                break;
+            case "Sexto EGB":
+                $nuevoAspirante->grado_asp ="6 EB";
+                break;
+            case "Séptimo EGB":
+                $nuevoAspirante->grado_asp ="7 EB";
+                break;
+            case "Octavo EGB":
+                $nuevoAspirante->grado_asp ="1 BS";
+                break;
+            case "Noveno EGB":
+                $nuevoAspirante->grado_asp ="2 BS";
+                break;
+            case "Décimo EGB":
+                $nuevoAspirante->grado_asp ="3 BS";
+                break;
+            case "1ro BGU":
+                $nuevoAspirante->grado_asp ="4 BG";
+                break;
+            case "2do BGU":
+                $nuevoAspirante->grado_asp ="5 BG";
+                break;
+            case "3ro BGU":
+                $nuevoAspirante->grado_asp ="6 BG";
+                break;
+        }
+        
         $nuevoAspirante->proc_asp = $request->proc_asp;
         $nuevoAspirante->ciu_ins_proc_asp = $request->ciu_ins_proc_asp;
         $nuevoAspirante->estado_asp = false;

@@ -224,7 +224,11 @@
                             </tr>
                             <tr>
                             <th>Certificado del D.E.C.E.</th>
+                                @if (($aspirante->comportamiento_asp!=NULL) && ($aspirante->comportamiento_asp!=" "))
                                 <td><a href="../../../storage/app/{{$aspirante->comportamiento_asp}}" target="_blank" download="{{$aspirante->ape_asp.' '.$aspirante->nom_asp.' D.E.C.E.'}}" class="btn btn-info btn-sm"> Descargar</a></td>
+                                @else
+                                <td> No dispone </td>
+                                @endif
                             </tr>
                             <tr>
                             <th colspan="2" class="text-center">Descargar Información de Aspirante</th>
