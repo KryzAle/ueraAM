@@ -23,7 +23,18 @@ class InscripcionController extends Controller
         return $pdf->download($aspirante->ape_asp." ".$aspirante->nom_asp.".pdf");
     }
     public function datosEstudianteInicial(Request $request){
+        
         $nuevoAspirante = new App\Aspirante;
+
+        if($request->hasFile('copia_ced_asp')){
+            $cedula = $request->file('copia_ced_asp')->store('cedulas');
+            $nuevoAspirante->copia_ced_asp = $cedula;
+        }
+        if($request->hasFile('foto_asp')){
+            $foto = $request->file('foto_asp')->store('fotos');
+            $nuevoAspirante->foto_asp = $foto;
+        }
+
         $nuevoAspirante->ced_asp = $request->ced_asp;
         $nuevoAspirante->ape_asp = $request->ape_asp;
         $nuevoAspirante->nom_asp = $request->nom_asp;

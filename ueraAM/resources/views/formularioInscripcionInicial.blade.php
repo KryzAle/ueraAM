@@ -40,7 +40,7 @@
                         </div>
                         <hr noshade="noshade" size="2" width="100%" />
                         <br>
-                    <form method="POST" action="{{ route('aspiranteinicial.crear') }}">
+                    <form method="POST" action="{{ route('aspiranteinicial.crear') }}" enctype="multipart/form-data">
                         @csrf
                         <div class="form-row">
                             <div class="name">Cédula de Identidad</div>
@@ -197,7 +197,25 @@
                                 
                             </div>
                         </div>
-                        
+
+                        <div class="form-row">
+                            <div class="name">Copia de la Cédula</div>
+                            <div class="value">
+                                <div class="input-group">
+                                <input type="file" class="form-control-file" accept=".pdf" id="cedula" name="copia_ced_asp" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="name">Fotografia del estudiante tamaño carné</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input type="file" class="form-control-file" accept=".jpg" id="foto" name="foto_asp" required>
+                                </div>
+                            </div>
+                        </div>
+                    
                         <!-- Title Page
 
                         

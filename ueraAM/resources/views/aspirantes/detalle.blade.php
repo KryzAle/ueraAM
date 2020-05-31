@@ -212,15 +212,27 @@
                             </tr>
                             <tr>
                             <th>Calificaciones</th>
+                                @if (($aspirante->computos_asp!=NULL) && ($aspirante->computos_asp!=" "))
                                 <td><a href="../../../storage/app/{{$aspirante->computos_asp}}" target="_blank" download="{{$aspirante->ape_asp.' '.$aspirante->nom_asp.' Calificaciones'}}" class="btn btn-info btn-sm"> Descargar</a></td>
+                                @else
+                                <td> No dispone </td>
+                                @endif
                             </tr>
                             <tr>
                             <th>Copia de Cédula</th>
+                                @if (($aspirante->copia_ced_asp!=NULL) && ($aspirante->copia_ced_asp!=" "))
                                 <td><a href="../../../storage/app/{{$aspirante->copia_ced_asp}}" target="_blank" download="{{$aspirante->ape_asp.' '.$aspirante->nom_asp.' Cedula'}}" class="btn btn-info btn-sm"> Descargar</a></td>
+                                @else
+                                <td> No dispone </td>
+                                @endif
                             </tr>
                             <tr>
                             <th>Foto de Aspirante</th>
+                                @if (($aspirante->foto_asp!=NULL) && ($aspirante->foto_asp!=" "))
                                 <td><a href="../../../storage/app/{{$aspirante->foto_asp}}" target="_blank" download="{{$aspirante->ape_asp.' '.$aspirante->nom_asp.' Foto'}}" class="btn btn-info btn-sm"> Descargar</a></td>
+                                @else
+                                <td> No dispone </td>
+                                @endif
                             </tr>
                             <tr>
                             <th>Certificado del D.E.C.E.</th>
@@ -236,6 +248,8 @@
                             <tr>
                             <th colspan="2" class="text-center"><a href="{{route('generarpdf',$aspirante->id)}}" target="_blank" class="btn btn-outline-danger">Descargar</a></th>
                             </tr>
+                            @if(@Auth::user()->hasRole('administrador')||@Auth::user()->hasRole('psicologia'))
+
                             <tr>
                             <th colspan="2" class="text-center">Estado de la Solicitud</th>
                             </tr>
@@ -250,7 +264,7 @@
                                 
                                 </td>
                             </tr>
-                             
+                             @endif
 
                         </tbody>
                     </table>

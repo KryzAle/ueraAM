@@ -50,7 +50,8 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    @if(@Auth::user()->hasRole('administrador'))
+                                    @if(@Auth::user()->hasRole('administrador')||@Auth::user()->hasRole('psicologia')||@Auth::user()->hasRole('secretaria'))
+                                    
                                     <a class="dropdown-item" href="{{ route('home') }}">
                                        Lista de Aspirantes
                                     </a>
