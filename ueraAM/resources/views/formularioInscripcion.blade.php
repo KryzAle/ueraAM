@@ -61,13 +61,13 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="ape_asp" required>
+                                            <input style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" class="input--style-5" type="text" name="ape_asp" required>
                                             <label class="label--desc">Apellidos</label>
                                         </div>
                                     </div>
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="nom_asp" required>
+                                            <input style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" class="input--style-5" type="text" name="nom_asp" required>
                                             <label class="label--desc">Nombres</label>
                                         </div>
                                     </div>
@@ -81,7 +81,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="lug_nac_asp" required>
+                                            <input style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" class="input--style-5" type="text" name="lug_nac_asp" required>
                                         </div>
                                     </div>
                                 </div>
@@ -131,7 +131,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="nac_asp" required>
+                                            <input style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" class="input--style-5" type="text" name="nac_asp" required>
                                         </div>
                                     </div>
                                 </div>
@@ -139,15 +139,27 @@
                         </div>
                         <div class="form-row">
                             <div class="name">Etnia</div>
+                            
+
                             <div class="value">
-                                <div class="row row-space">
-                                    <div class="col-2">
-                                        <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="etn_asp" required>
-                                        </div>
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="etn_asp" required>
+                                            <option disabled="disabled" selected="selected">Escoja una opción</option>
+                                            <option>AFROECUATORIANO (A)</option>
+                                            <option>BLANCO (A)</option>
+                                            <option>INDIGENA</option>
+                                            <option>MESTIZO (A)</option>
+                                            <option>MONTUBIO (A)</option>
+                                            <option>MULATO (A)</option>
+                                            <option>NEGRO (A)</option>
+                                            <option>OTRO</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
                                     </div>
                                 </div>
                             </div>
+                            
                         </div>
                         <div class="form-row">
                             <div class="name">Correo Electrónico</div>
@@ -166,7 +178,7 @@
                                 <div class="form-row">
                                     <div class="value">
                                         <div class="input-group">
-                                            <input class="input--style-5" type="text" name="par_asp" required>
+                                            <input style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" class="input--style-5" type="text" name="par_asp" required>
                                             <label class="label--desc">Parroquia</label>
                                         </div>
                                     </div>
@@ -174,7 +186,7 @@
                                 <div class="form-row">
                                     <div class="value">
                                         <div class="input-group">
-                                            <input class="input--style-5" type="text" name="bar_asp" required>
+                                            <input style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" class="input--style-5" type="text" name="bar_asp" required>
                                             <label class="label--desc">Barrio/Ciudadela</label>
                                         </div>
                                     </div>
@@ -182,14 +194,14 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="cal_pri_asp" required>
+                                            <input style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" class="input--style-5" type="text" name="cal_pri_asp" required>
                                             <label class="label--desc">Calle principal</label>
                                         </div>
                                     </div>
                                     
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="cal_sec_asp" required>
+                                            <input style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" class="input--style-5" type="text" name="cal_sec_asp" required>
                                             <label class="label--desc">Calle secundaria</label>
                                         </div>
                                     </div>
@@ -205,7 +217,7 @@
                             <div class="name">Institución de la que proviene</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="company">
+                                    <input class="input--style-5" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" type="text"  name="company">
                                 </div>
                             </div>
                         </div>
@@ -216,7 +228,7 @@
                                 <div class="row row-refine">
                                     <div class="col-9">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="phone">
+                                            <input class="input--style-5" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" type="text"  name="phone">
                                             <label class="label--desc">Phone Number</label>
                                         </div>
                                     </div>
@@ -277,13 +289,13 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="ape_mad" required>
+                                            <input class="input--style-5" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" type="text"  name="ape_mad" required>
                                             <label class="label--desc">Apellidos</label>
                                         </div>
                                     </div>
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="nom_mad" required>
+                                            <input class="input--style-5" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" type="text"  name="nom_mad" required>
                                             <label class="label--desc">Nombres</label>
                                         </div>
                                     </div>
@@ -297,10 +309,10 @@
                                     <div class="rs-select2 js-select-simple select--no-search">
                                         <select name="est_civ_mad" required>
                                             <option disabled="disabled" selected="selected">Escoja una opción</option>
-                                            <option>Soltero/a</option>
-                                            <option>Casado/a</option>
-                                            <option>Viudo/a</option>
-                                            <option>Divorciado/a</option>
+                                            <option>SOLTERA</option>
+                                            <option>CASADA</option>
+                                            <option>VIUDA</option>
+                                            <option>DIVORCIADA</option>
                                         </select>
                                         <div class="select-dropdown"></div>
                                     </div>
@@ -314,7 +326,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="pro_mad" required>
+                                            <input class="input--style-5" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" type="text"  name="pro_mad" required>
                                         </div>
                                     </div>
                                 </div>
@@ -324,7 +336,7 @@
                             <div class="name">Lugar de trabajo</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="lug_tra_mad" required>
+                                    <input class="input--style-5" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" type="text"  name="lug_tra_mad" required>
                                 </div>
                             </div>
                         </div>
@@ -334,7 +346,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="tel_mad" required>
+                                            <input class="input--style-5" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" type="text"  name="tel_mad" required>
                                         </div>
                                     </div>
                                 </div>
@@ -346,7 +358,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="cel_mad" required>
+                                            <input class="input--style-5" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" type="text"  name="cel_mad" required>
                                         </div>
                                     </div>
                                 </div>
@@ -372,7 +384,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="ced_pad" required>
+                                            <input class="input--style-5" type="text"  name="ced_pad" required>
                                         </div>
                                     </div>
                                 </div>
@@ -385,13 +397,13 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="ape_pad" required>
+                                            <input class="input--style-5" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" type="text"  name="ape_pad" required>
                                             <label class="label--desc">Apellidos</label>
                                         </div>
                                     </div>
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="nom_pad" required>
+                                            <input class="input--style-5" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" type="text"  name="nom_pad" required>
                                             <label class="label--desc">Nombres</label>
                                         </div>
                                     </div>
@@ -406,10 +418,10 @@
                                     <div class="rs-select2 js-select-simple select--no-search">
                                         <select name="est_civ_pad" required>
                                             <option disabled="disabled" selected="selected">Escoja una opción</option>
-                                            <option>Soltero/a</option>
-                                            <option>Casado/a</option>
-                                            <option>Viudo/a</option>
-                                            <option>Divorciado/a</option>
+                                            <option>SOLTERO</option>
+                                            <option>CASADO</option>
+                                            <option>VIUDO</option>
+                                            <option>DIVORCIADO</option>
                                         </select>
                                         <div class="select-dropdown"></div>
                                     </div>
@@ -422,7 +434,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="pro_pad" required>
+                                            <input class="input--style-5" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" type="text"  name="pro_pad" required>
                                         </div>
                                     </div>
                                 </div>
@@ -432,7 +444,7 @@
                             <div class="name">Lugar de trabajo</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="lug_tra_pad" required>
+                                    <input class="input--style-5" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" type="text"  name="lug_tra_pad" required>
                                 </div>
                             </div>
                         </div>
@@ -442,7 +454,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="tel_pad" required>
+                                            <input class="input--style-5" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" type="text"  name="tel_pad" required>
                                         </div>
                                     </div>
                                 </div>
@@ -454,7 +466,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="cel_pad" required>
+                                            <input class="input--style-5" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" type="text"  name="cel_pad" required>
                                         </div>
                                     </div>
                                 </div>
@@ -479,7 +491,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="ced_rep" required>
+                                            <input class="input--style-5" type="text"  name="ced_rep" required>
                                         </div>
                                     </div>
                                 </div>
@@ -492,13 +504,13 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="ape_rep" required>
+                                            <input class="input--style-5" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" type="text"  name="ape_rep" required>
                                             <label class="label--desc">Apellidos</label>
                                         </div>
                                     </div>
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="nom_rep" required>
+                                            <input class="input--style-5" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" type="text"  name="nom_rep" required>
                                             <label class="label--desc">Nombres</label>
                                         </div>
                                     </div>
@@ -513,10 +525,10 @@
                                     <div class="rs-select2 js-select-simple select--no-search">
                                         <select name="est_civ_rep" required>
                                             <option disabled="disabled" selected="selected">Escoja una opción</option>
-                                            <option>Soltero/a</option>
-                                            <option>Casado/a</option>
-                                            <option>Viudo/a</option>
-                                            <option>Divorciado/a</option>
+                                            <option>SOLTERO/A</option>
+                                            <option>CASADO/A</option>
+                                            <option>VIUDO/A</option>
+                                            <option>DIVORCIADO/A</option>
                                         </select>
                                         <div class="select-dropdown"></div>
                                     </div>
@@ -529,7 +541,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="pro_rep" required>
+                                            <input class="input--style-5" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" type="text"  name="pro_rep" required>
                                         </div>
                                     </div>
                                 </div>
@@ -539,7 +551,7 @@
                             <div class="name">Lugar de trabajo</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="lug_tra_rep" required>
+                                    <input class="input--style-5" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" type="text"  name="lug_tra_rep" required>
                                 </div>
                             </div>
                         </div>
@@ -549,7 +561,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="tel_rep" required>
+                                            <input class="input--style-5" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" type="text"  name="tel_rep" required>
                                         </div>
                                     </div>
                                 </div>
@@ -561,7 +573,7 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="cel_rep" required>
+                                            <input class="input--style-5" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" type="text"  name="cel_rep" required>
                                         </div>
                                     </div>
                                 </div>

@@ -130,7 +130,7 @@
                         <div class="form-row">
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="proc_asp" required>
+                                    <input class="input--style-5" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" type="text"  name="proc_asp" required>
                                 </div>
                             </div>
                         </div>
@@ -139,7 +139,7 @@
                         <div class="form-row">
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="ciu_ins_proc_asp" required>
+                                    <input class="input--style-5" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" type="text"  name="ciu_ins_proc_asp" required>
                                 </div>
                             </div>
                         </div>

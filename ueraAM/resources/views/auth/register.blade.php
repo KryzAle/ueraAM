@@ -33,7 +33,11 @@
                                 @enderror
                             </div>
                         </div>
-
+                        <div class="mx-auto" style="width: 400px;">
+                            <div class="alert alert-primary"  role="alert">
+                                Cree su cuenta con su correo electrónico y contraseña
+                            </div>
+                        </div>
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">Correo electrónico</label>
 
