@@ -80,5 +80,11 @@ class Estudiante extends Model
     public function scopeGrad_asp($query,$grado_asp){
         if($grado_asp)
             return $query->where('grado_asp','LIKE',"%$grado_asp%");
+
+    }
+    public function scopeCed_asp($query,$ced_asp){
+        if($ced_asp)
+            return $query->where('ced_asp','LIKE',"%$ced_asp%");
+
     }
 }

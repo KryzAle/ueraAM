@@ -20,7 +20,9 @@ class MatriculaController extends Controller
             $cedula=$estudiante->ced_asp;
             $nombre=$estudiante->nom_asp." ".$estudiante->ape_asp;
             $email=$estudiante->ema_asp;
-            return view('auth.register',compact('cedula','nombre','email'));
+            return redirect()->route('register', ['cedula='.$cedula,'nombre='.$nombre,'email='.$email]);
+
+            //return view('auth.register',compact('cedula','nombre','email'));
         }
 
 

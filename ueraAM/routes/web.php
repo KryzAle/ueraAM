@@ -16,6 +16,7 @@ Route::delete('/home/eliminar/{id}','HomeController@eliminar')->name('aspirantes
 Route::get('/home/aprobar/{id}', 'HomeController@aprobar')->name('aspirantes.aprobar');
 
 Route::get('/estudiantes', 'EstudianteController@index')->name('estudiantes');
+Route::get('/busquedaestudiante', 'EstudianteController@busquedaestudiante')->name('busquedaestudiante');
 Route::get('/estudiantes/detalle/{id}', 'EstudianteController@detalle')->name('estudiantes.detalle');
 Route::get('/estudiantes/editar/{id}', 'EstudianteController@editar')->name('estudiantes.editar');
 Route::put('/estudiantes/editar/{id}', 'EstudianteController@update')->name('estudiantes.update');

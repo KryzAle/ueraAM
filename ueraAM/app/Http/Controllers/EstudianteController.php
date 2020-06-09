@@ -31,6 +31,12 @@ class EstudianteController extends Controller
         $estudiantes = App\Estudiante::orderBy('created_at', 'desc')->grad_asp($curso)->paginate(50);
         return view('listaestudiantes',compact('estudiantes'));
     }
+    public function busquedaestudiante(Request $request)
+    {
+        $cedula = $request->get('ced_asp');
+        $estudiantes = App\Estudiante::orderBy('created_at', 'desc')->ced_asp($cedula)->paginate(50);
+        return view('listaestudiantes',compact('estudiantes'));
+    }
 
     public function detalle($id){
         $estudiante = App\Estudiante::findOrFail($id);

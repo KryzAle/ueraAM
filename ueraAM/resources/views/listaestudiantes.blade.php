@@ -24,18 +24,6 @@
                     <table>
                         <tr>
                             <td>
-                            <form method="GET" action="{{route('estudiantes')}}">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control"  value="{{request('grado_asp')}}" placeholder="Ingrese curso/grado" aria-label="Buscar por curso/grado" aria-describedby="basic-addon2" name="grado_asp">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" type="submit">Buscar</button>
-                                    </div>
-                                </div>
-                            </form>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
                                 <form method="GET" action="{{route('generar.aprobados')}}">
                                     <div class="input-group mb-3">
                                         <input type="text" class="form-control"  value="{{ request('grado_asp')}}" placeholder="Ingrese curso/grado" aria-label="Buscar por curso/grado" aria-describedby="basic-addon2" name="grado_asp_pdf" hidden>
@@ -47,6 +35,35 @@
                                 </form>
                             </td>
                         </tr>
+                        <tr>
+                            <td>
+                                <form method="GET" action="{{route('busquedaestudiante')}}">
+                                    <div class="row">
+                                        <div class="col">
+                                            <input type="text" class="form-control"  value="{{request('ced_asp')}}" placeholder="Búsqueda por Cédula" aria-label="Buscar por curso/grado" aria-describedby="basic-addon2" name="ced_asp">
+                                        </div>
+                                        <div class="col">
+                                        <button class="btn btn-outline-primary" type="submit">Buscar por Cédula</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </td>
+                            <td>
+                            <form method="GET" action="{{route('estudiantes')}}">
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control"  value="{{request('grado_asp')}}" placeholder="Buscar por curso/grado" aria-label="Buscar por curso/grado" aria-describedby="basic-addon2" name="grado_asp">
+                                    </div>
+                                    <div class="col">
+                                    <button class="btn btn-outline-success" type="submit">Filtrar por curso</button>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                            </td>
+                            
+                        </tr>
+                        
                    </table>
                     <table class="table table-responsive">
                     

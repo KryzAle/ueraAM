@@ -15,16 +15,21 @@
                             <label for="cedula" class="col-md-4 col-form-label text-md-right">Cédula</label>
 
                             <div class="col-md-6">
-                                <div class="d-inline-flex p-2">{{ $cedula }}</div>
-                                <input id="cedula" type="text" name="cedula" value="{{ $cedula }}" hidden >
+                                <div class="d-inline-flex p-2">{{ request('cedula') }}</div>
+                                <input id="cedula" class="form-control @error('cedula') is-invalid @enderror" type="text" name="cedula" value="{{ request('cedula') }}" hidden>
+                                @error('cedula')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Nombre</label>
 
                             <div class="col-md-6">
-                                <div class="d-inline-flex p-2">{{ $nombre }}</div>
-                                <input id="name" type="text" name="name" value="{{ $nombre }}" hidden>
+                                <div class="d-inline-flex p-2">{{ request('nombre') }}</div>
+                                <input id="name" type="text" name="name" value="{{ request('nombre') }}" hidden>
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -42,7 +47,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right">Correo electrónico</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $email }}" required autocomplete="email">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ request('email') }}" required autocomplete="email">
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
