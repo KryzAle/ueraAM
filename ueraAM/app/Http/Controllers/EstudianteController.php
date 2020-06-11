@@ -55,6 +55,10 @@ class EstudianteController extends Controller
         $estudianteUpdate->par_asp = $request->par_asp;
         $estudianteUpdate->cal_pri_asp = $request->cal_pri_asp;
         $estudianteUpdate->cal_sec_asp = $request->cal_sec_asp;
+        $estudianteUpdate->ema_asp = $request->ema_asp;
+        $estudianteUpdate->tel_rep = $request->tel_rep;
+        $estudianteUpdate->cel_rep = $request->cel_rep;
+
         $estudianteUpdate->save();
         return back()->with('mensaje','Estudiante Actualizado');
     }

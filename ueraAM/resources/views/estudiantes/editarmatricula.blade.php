@@ -93,7 +93,7 @@
                         </tbody>
                         </table>
                         <br>
-                    <button class="btn btn-warning" type="submit">Actualizar</button>
+                    <button class="btn btn-warning" type="submit">Enviar</button>
                     <a href="{{route('home')}}" class="btn btn-success">Volver</a>
                     </form>
                 </div>

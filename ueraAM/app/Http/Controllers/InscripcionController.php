@@ -19,6 +19,7 @@ class InscripcionController extends Controller
     public function generarPDF($id){
         $aspirante = App\Aspirante::findOrFail($id);
         $pdf = App::make('dompdf.wrapper');
+        $pdf->getDomPDF()->set_option("enable_php", true);
         $pdf->loadView('aspirantes.pdfaspirante', ['aspirante' => $aspirante]);
         return $pdf->download($aspirante->ape_asp." ".$aspirante->nom_asp.".pdf");
     }

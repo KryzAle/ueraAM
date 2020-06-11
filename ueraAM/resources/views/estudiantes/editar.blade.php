@@ -29,6 +29,33 @@
                         <table class="table">
                         <tbody>
                             <tr>
+                                <th colspan="2" class="text-center">Datos Informativos</th>
+                            </tr>
+                            <tr>
+                                <th>Correo electónico del estudiante</th>
+                                <td>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Correo Electrónico" value="{{$estudiante->ema_asp}}" name="ema_asp" required>
+                                </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Telefono convencional del representante</th>
+                                <td>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Telefono convencional" value="{{$estudiante->tel_rep}}" name="tel_rep" required>
+                                </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Telefono celular del representante </th>
+                                <td>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Telefono celular" value="{{$estudiante->cel_rep}}" name="cel_rep" required>
+                                </div>
+                                </td>
+                            </tr>
+                            <tr>
                             <th colspan="2" class="text-center">Dirección Domiciliaria</th>
                             </tr>
                             <tr>
