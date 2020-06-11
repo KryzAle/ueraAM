@@ -21,6 +21,9 @@ Route::get('/estudiantes/detalle/{id}', 'EstudianteController@detalle')->name('e
 Route::get('/estudiantes/editar/{id}', 'EstudianteController@editar')->name('estudiantes.editar');
 Route::put('/estudiantes/editar/{id}', 'EstudianteController@update')->name('estudiantes.update');
 
+Route::get('/estudiantes/contrato/{id}', 'EstudianteController@editarcontrato')->name('estudiantes.editar.contrato');
+Route::put('/estudiantes/contrato/{id}', 'EstudianteController@updatecontrato')->name('estudiantes.update.contrato');
+
 Route::get('/estudiantes/actualizarmatricula/{id}', 'EstudianteController@editarmatricula')->name('estudiantes.editar.matricula');
 Route::put('/estudiantes/actualizarmatricula/{id}', 'EstudianteController@updatematricula')->name('estudiantes.update.matricula');
 

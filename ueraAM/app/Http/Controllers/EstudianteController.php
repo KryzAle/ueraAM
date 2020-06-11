@@ -7,6 +7,8 @@ use App;
 use App\Exports\EstudiantesExport;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\EstudiantesImport;
+use Illuminate\Support\Facades\Auth;
+
 
 class EstudianteController extends Controller
 {
@@ -67,7 +69,7 @@ class EstudianteController extends Controller
         }
         $hoy = getdate();
         $fechaHoy= $hoy['mday']."/" .$hoy['mon'] ."/".$hoy['year'];
-        
+         
         $estudianteUpdate = App\Estudiante::findOrFail($id);
         $estudianteUpdate->ced_fac = $request->ced_fac;
         $estudianteUpdate->nom_fac = $request->nom_fac;
@@ -81,6 +83,29 @@ class EstudianteController extends Controller
         $estudianteUpdate->save();
         return back()->with('mensaje','Datos de Pago y factura Actualizado');
     }
+
+    public function editarcontrato($id){
+        $usuario = App\User::findOrFail($id);
+        $estudiante =App\Estudiante::where('ced_asp', $usuario->cedula)->first();
+        return view('estudiantes.contrato',compact('estudiante'));
+    }
+    public function updatecontrato(Request $request,$id){
+        
+        $estudianteUpdate = App\Estudiante::findOrFail($id);
+        $estudianteUpdate->fe_asp = $request->fe_asp;
+        $estudianteUpdate->vac_asp = $request->vac_asp;
+        $estudianteUpdate->exp_asp = $request->exp_asp;
+        $estudianteUpdate->dce_asp = $request->dce_asp;
+        $estudianteUpdate->cerp_asp = $request->cerp_asp;
+        $estudianteUpdate->cerc_asp = $request->cerc_asp;
+        $estudianteUpdate->cedula_asp = $request->cedula_asp;
+
+        $estudianteUpdate->save();
+        return redirect()->route('estudiantes.editar.matricula',Auth::id());
+
+        //return back()->with('mensaje','Contrato guardado');
+    }
+
     public function marcarInscrito($id){
         $estudianteUpdate = App\Estudiante::orderBy('created_at', 'desc')->findOrFail($id);
         $estudianteUpdate->estado_asp = true;

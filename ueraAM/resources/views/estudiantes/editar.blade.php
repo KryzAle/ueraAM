@@ -12,8 +12,8 @@
                 <nav class="nav nav-pills flex-column flex-sm-row">
                     <a class="flex-sm-fill text-sm-center nav-link" href="{{ route('home') }}">Inicio</a>
                     <a class="flex-sm-fill text-sm-center nav-link active" href="#">Actualizacion de datos</a>
-                    <a class="flex-sm-fill text-sm-center nav-link" href="#">Convenio de Comportamiento</a>
-                    <a class="flex-sm-fill text-sm-center nav-link disabled" href="#">Legalizar Matrícula</a>
+                    <a class="flex-sm-fill text-sm-center nav-link" href="{{route('estudiantes.editar.contrato', $usuarioActivo)}}">Contrato de Servicios Educativos</a>
+                    <a class="flex-sm-fill text-sm-center nav-link disabled"  href="{{route('estudiantes.editar.matricula', $usuarioActivo)}}">Legalizar Matrícula</a>
                 </nav>
                 @endif
                 <div class="card-body">
