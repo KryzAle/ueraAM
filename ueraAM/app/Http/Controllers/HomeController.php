@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ReportarAprobado;
+use App\Mail\ReportarRechazado;
 
 class HomeController extends Controller
 {
@@ -121,7 +122,7 @@ class HomeController extends Controller
         $nuevoEstudiante->cedula_mad = "";
         $nuevoEstudiante->cedula_pad = "";
         $nuevoEstudiante->cedula_rep = "";
-        $nuevoEstudiante->foto_asp = $request->foto_asp;
+        //$nuevoEstudiante->foto_asp = $request->foto_asp;
         
         $data = array(
             'nombres' => $nuevoEstudiante->nom_asp." ". $nuevoEstudiante->ape_asp,
@@ -130,12 +131,10 @@ class HomeController extends Controller
           );
           Mail::send('emails.aspiranteaprobado', $data, function ($message) {
             $message->from('uera.admision@gmail.com', 'UERA Admisión');
-            $message->to('kryzale@gmail.com')->subject('¡Aspirante Aprobado!');
+            $message->to('dece@ueradoroteas.edu.ec')->subject('¡Aspirante Aprobado!');
         });
         
         Mail::to($request->ema_asp)->send(new ReportarAprobado($request->nom_asp." ".$request->ape_asp,$request->ced_asp));
-        Mail::to($request->ema_mad)->send(new ReportarAprobado($request->nom_asp." ".$request->ape_asp,$request->ced_asp));
-        Mail::to($request->ema_pad)->send(new ReportarAprobado($request->nom_asp." ".$request->ape_asp,$request->ced_asp));
         Mail::to($request->ema_rep)->send(new ReportarAprobado($request->nom_asp." ".$request->ape_asp,$request->ced_asp));
 
         $nuevoEstudiante->save();
@@ -146,6 +145,8 @@ class HomeController extends Controller
     }
     public function eliminar($id){
         $aspiranteEliminar = App\Aspirante::findOrFail($id);
+        Mail::to($aspiranteEliminar->ema_asp)->cc('cristiankas2@gmail.com')->send(new ReportarRechazado($aspiranteEliminar->nom_asp." ".$aspiranteEliminar->ape_asp,$aspiranteEliminar->ced_asp));
+        Mail::to($aspiranteEliminar->ema_rep)->send(new ReportarRechazado($aspiranteEliminar->nom_asp." ".$aspiranteEliminar->ape_asp,$aspiranteEliminar->ced_asp));
         $aspiranteEliminar->delete();
         $aspirantes = App\Aspirante::orderBy('created_at', 'desc')->paginate(50);
         return redirect('home')->with('error','Aspirante Rechazado y Solicitud Eliminada')->with('aspirantes',$aspirantes);
