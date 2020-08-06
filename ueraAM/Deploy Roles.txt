@@ -45,6 +45,13 @@ $user->password = Hash::make('psicologia.uera');
 $user->assignRole('psicologia');
 $user->save();
 
+$user = new App\User;
+$user->name = 'Colecturia';
+$user->email = 'colecturia@uera.edu.ec';
+$user->cedula = '4444444444';
+$user->password = Hash::make('colecturia.uera');
+$user->assignRole('secretaria');
+$user->save();
 
 //crear permisos
 $permission = Permission::create(['name' => 'crear usuario']);

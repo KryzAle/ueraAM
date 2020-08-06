@@ -1,0 +1,4 @@
+php artisan tinker
+$user = App\User::where('cedula', '0603928854')->first();
+$user->password = Hash::make('0603928854');
+$user->save();

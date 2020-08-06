@@ -75,6 +75,7 @@
                                     <th scope="col">Apellidos</th>
                                     <th scope="col">Grado/Curso</th>
                                     <th scope="col">Inscrito en el Escolástico</th>
+                                    <th scope="col">Pago</th>
                                     <th scope="col">Acciones</th>
                                 </tr>
                             </thead>
@@ -93,6 +94,18 @@
                                         @else
                                             <div class="alert alert-success" role="alert">
                                                 Si
+                                            </div>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        
+                                        @if (($item->fec_pago_asp!=NULL) && ($item->fec_pago_asp!=" "))
+                                            <div class="alert alert-success" role="alert">
+                                                Si
+                                            </div>
+                                        @else
+                                            <div class="alert alert-danger" role="alert">
+                                                No
                                             </div>
                                         @endif
                                     </td>
